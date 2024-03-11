@@ -1,0 +1,59 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <ImageView
+        android:id="@+id/messengerImg"
+        android:layout_width="32dp"
+        android:layout_height="32dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="13dp"
+        android:padding="5dp"
+        android:src="@drawable/messenger"
+        app:tint="@color/white"/>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/messengerCountCard"
+        android:layout_width="20dp"
+        android:layout_height="20dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="-17dp"
+        android:layout_marginTop="14dp"
+        android:layout_toEndOf="@id/messengerImg"
+        android:backgroundTint="@color/red"
+        android:elevation="5dp"
+        app:cardCornerRadius="50dp"
+        android:visibility="gone">
+
+
+        <RelativeLayout
+            android:id="@+id/messenger_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+
+            <TextView
+                android:id="@+id/messengerCounterText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textSize="8sp"
+                android:textStyle="bold"/>
+
+
+        </RelativeLayout>
+
+
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+</RelativeLayout>

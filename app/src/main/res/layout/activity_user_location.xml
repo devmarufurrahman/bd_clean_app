@@ -1,0 +1,512 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/activity_background_4"
+    tools:context=".UserLocationActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        app:title="@string/bdclean_name"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white_2"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_2">
+
+        <include
+            layout="@layout/language_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"/>
+
+        <Button
+            android:id="@+id/log_out"
+            android:layout_width="80dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+            app:titleTextColor="@color/white_2"
+            android:background="@drawable/button_shape_1"
+            android:drawableStart="@drawable/ic_baseline_logout_24"
+            android:paddingHorizontal="30dp"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:text="@string/choose_your_event_location"
+        android:layout_gravity="center"
+        android:textColor="@color/white_2"
+        android:textSize="16sp"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:background="@drawable/layout_background"
+        android:backgroundTint="@color/green_4"
+        android:layout_centerHorizontal="true"
+        android:justificationMode="inter_word"
+        android:padding="10dp"
+        android:layout_below="@+id/custom_toolbar"
+        android:fontFamily="@font/bdclean_bold"/>
+
+    <ScrollView
+        android:id="@+id/location_scroll"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/tv_1">
+
+        <LinearLayout
+            android:id="@+id/layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_below="@+id/tv_1">
+
+            <LinearLayout
+                android:id="@+id/ll_1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/division_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/division"
+                    android:fontFamily="@font/bdclean"
+                    android:layout_gravity="center"
+                    android:textColor="@color/hint_color"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/division_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white_2"
+                    android:background="@null"
+                    android:textSize="12sp"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/location_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_background"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/city_dialog_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white_2"
+                        android:buttonTint="@color/white_2"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/city_corporation"/>
+                    <RadioButton
+                        android:id="@+id/district_dialog_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white_2"
+                        android:buttonTint="@color/white_2"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/district"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/district_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/district"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:fontFamily="@font/bdclean"
+                    android:textColor="@color/hint_color"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/district_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white_2"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/upazilaLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/upazila_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/upazila"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:fontFamily="@font/bdclean"
+                    android:layout_gravity="center"
+                    android:textColor="@color/hint_color"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/upazilla_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white_2"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/zoneLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/zone_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/zone"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:fontFamily="@font/bdclean"
+                    android:layout_gravity="center"
+                    android:textColor="@color/hint_color"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/zone_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white_2"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="20dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/location_type2_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_background"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/municipal_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white_2"
+                        android:buttonTint="@color/white_2"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/municipal"/>
+                    <RadioButton
+                        android:id="@+id/union_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white_2"
+                        android:buttonTint="@color/white_2"
+                        android:layout_weight="1"
+                        android:text="@string/union"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/unionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/union_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/union"
+                    android:fontFamily="@font/bdclean"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:textColor="@color/hint_color"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/union_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white_2"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/ward_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/ward"
+                    android:fontFamily="@font/bdclean"
+                    android:layout_gravity="center"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:textColor="@color/hint_color"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/ward_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:textColor="@color/white_2"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/villageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/village_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/ward_village"
+                    android:fontFamily="@font/bdclean"
+                    android:layout_gravity="center"
+                    android:textColor="@color/hint_color"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/village_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:textColor="@color/white_2"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/area_details_et"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:background="@drawable/edittext_background"
+                android:inputType="text"
+                android:fontFamily="@font/bdclean"
+                android:importantForAutofill="no"
+                android:textColor="@color/white_2"
+                android:layout_marginTop="10dp"
+                android:hint="@string/area_details_et"
+                android:textSize="14sp"
+                android:visibility="gone"
+                android:paddingHorizontal="15dp"/>
+
+            <LinearLayout
+                android:id="@+id/ll_6"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/reg_cancel_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    app:titleTextColor="@color/white_2"
+                    android:text="@string/back"
+                    android:textColor="@color/white_2"
+                    android:backgroundTint="@color/red"
+                    android:background="@drawable/button_shape_4"/>
+
+                <Button
+                    android:id="@+id/reg_next_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:textColor="@color/white_2"
+                    android:backgroundTint="@color/green_2"
+                    android:background="@drawable/button_shape_4"
+                    android:text="@string/next"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/location_scroll"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="5dp"
+        android:layout_marginBottom="5dp"
+        android:background="@drawable/button_shape_7"
+        android:backgroundTint="@color/bdclean_green"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/important_notes"
+            android:gravity="center"
+            android:textAllCaps="false"
+            android:textColor="@color/white_2"
+            android:textSize="18sp"
+            android:fontFamily="@font/bdclean_bold"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/bdclean"
+            android:justificationMode="inter_word"
+            android:padding="5dp"
+            android:text="@string/location_guideline"
+            android:gravity="start"
+            android:textColor="@color/white_2"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:indeterminateTint="@color/red" />
+
+</RelativeLayout>

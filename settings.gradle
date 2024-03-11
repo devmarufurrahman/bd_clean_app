@@ -1,0 +1,22 @@
+pluginManagement {
+    repositories {
+        gradlePluginPortal()
+        google()
+        mavenCentral()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        jcenter()
+    }
+}
+dependencyResolutionManagement {
+    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
+    repositories {
+        google()
+        mavenCentral()
+        mavenCentral()
+        maven { url "https://jitpack.io" }
+        jcenter()
+    }
+}
+rootProject.name = "BDCLEAN"
+include ':app'

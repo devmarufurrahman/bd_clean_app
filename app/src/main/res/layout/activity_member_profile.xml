@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".PersonalProfileActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        app:title="Membership Profile"
+        app:titleTextColor="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/green_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <RelativeLayout
+        android:id="@+id/pp_ll1"
+        android:orientation="vertical"
+        android:layout_below="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_2">
+
+        <ImageView
+            android:id="@+id/personal_iv"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:src="@drawable/icon_user" />
+
+        <TextView
+            android:id="@+id/personal_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/personal_iv"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:textAllCaps="true"
+            android:text="name"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/member_position"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/personal_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="10dp"
+            android:layout_marginEnd="10dp"
+            android:layout_marginBottom="10dp"
+            android:textAllCaps="true"
+            android:text="position"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/pp_ll2"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pp_ll1"
+        android:layout_marginTop="10dp"
+        android:layout_marginHorizontal="20dp"
+        android:padding="10dp">
+
+<!--        <LinearLayout-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:src="@drawable/icon_position"-->
+<!--                android:layout_margin="10dp"/>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/personal_email"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:text="Position details"-->
+<!--                android:paddingStart="20dp"-->
+<!--                android:textColor="@color/black"-->
+<!--                android:gravity="center"/>-->
+
+<!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <ImageView
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/icon_level"
+                android:layout_margin="10dp"/>
+
+            <TextView
+                android:id="@+id/org_level"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:text="Level"
+                android:paddingStart="20dp"
+                android:textColor="@color/black"
+                android:gravity="center"/>
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:orientation="horizontal"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_marginTop="10dp">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="35dp"-->
+<!--                android:layout_height="35dp"-->
+<!--                android:scaleType="fitCenter"-->
+<!--                android:src="@drawable/icon_member_code"-->
+<!--                android:layout_margin="10dp"/>-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/personal_userName"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:text="Membership Code"-->
+<!--                android:paddingStart="20dp"-->
+<!--                android:gravity="center"-->
+<!--                android:textColor="@color/black"/>-->
+
+<!--        </LinearLayout>-->
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/activity_log_tv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/pp_ll2"
+        android:layout_centerHorizontal="true"
+        android:layout_marginVertical="10dp"
+        android:text="@string/activity_log"
+        android:textSize="16sp"
+        android:textColor="@color/red"
+        android:textStyle="bold"/>
+
+    <ListView
+        android:id="@+id/activity_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/activity_log_tv"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="10dp"
+        android:dividerHeight="5dp"/>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/red" />
+
+</RelativeLayout>

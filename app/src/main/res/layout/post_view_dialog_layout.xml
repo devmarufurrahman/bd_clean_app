@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="730dp"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="false"
+    tools:ignore="HardcodedText">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:background="@color/green_4"/>
+
+        <ImageView
+            android:id="@+id/bd_clean_logo"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/bdclean_logo_3"
+            android:layout_centerHorizontal="true"/>
+
+
+        <LinearLayout
+            android:id="@+id/layout_2"
+            android:layout_below="@+id/bd_clean_logo"
+            android:layout_width="match_parent"
+            android:layout_height="750dp"
+            android:orientation="vertical">
+
+            <WebView
+                android:id="@+id/post_view"
+                android:layout_width="match_parent"
+                android:layout_height="570dp"/>
+
+
+            <ProgressBar
+                android:id="@+id/progressBar_web"
+                style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                android:layout_width="match_parent"
+                android:layout_height="10dp"
+                android:indeterminateTint="@color/red"
+                android:max="3"
+                android:progress="0"/>
+
+            </LinearLayout>
+
+        <TextView
+            android:id="@+id/close_btn"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:background="@color/green_2"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:layout_alignParentBottom="true"
+            android:text="@string/close"
+            android:textSize="18sp"
+            android:fontFamily="@font/bdclean_bold"
+            android:textStyle="bold"
+            android:textColor="@color/white"/>
+
+    </RelativeLayout>
+
+</androidx.cardview.widget.CardView>

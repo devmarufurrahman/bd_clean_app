@@ -1,0 +1,148 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewEvaluationActivity"
+    android:background="@drawable/activity_background_4">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        app:title="@string/new_evaluation_report"
+        app:titleTextColor="@color/white_2"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/green_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="10dp"
+        android:layout_below="@+id/custom_toolbar">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:background="@drawable/tittle_bar"
+            android:text="@string/create_new_evaluation"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bdclean"
+            />
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+            <LinearLayout
+                android:orientation="vertical"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/subject"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textSize="14sp"
+                    android:paddingStart="15dp"
+                    android:background="@drawable/edittext_background"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    android:textColorHint="@color/hint_color"
+                    android:inputType="textMultiLine"
+                    android:hint="@string/evaluation_subject"
+                    android:fontFamily="@font/bdclean"/>
+
+                <EditText
+                    android:id="@+id/body"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginTop="15dp"
+                    android:background="@drawable/edittext_background"
+                    android:textCursorDrawable="@drawable/custom_cursor"
+                    android:textColorHint="@color/hint_color"
+                    android:gravity="top|start"
+                    android:hint="@string/details"
+                    android:inputType="textMultiLine"
+                    android:padding="15dp"
+                    android:textSize="14sp" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:orientation="horizontal"
+                    android:background="@drawable/edittext_background"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center">
+
+                    <TextView
+                        android:layout_width="150dp"
+                        android:layout_height="wrap_content"
+                        android:text="@string/report_for"
+                        android:fontFamily="@font/bdclean"
+                        android:textColor="@color/hint_color"
+                        android:textAllCaps="false"
+                        android:textSize="14sp"
+                        android:paddingHorizontal="15dp"/>
+
+                    <Button
+                        android:id="@+id/select_evaluation_for_spinner"
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_margin="5dp"
+                        android:background="@null"
+                        android:drawableEnd="@drawable/icon_dropdown"
+                        android:paddingHorizontal="20dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="10dp"
+                    android:layout_marginTop="15dp"
+                    android:gravity="center"
+                    android:weightSum="2">
+
+                    <Button
+                        android:id="@+id/submit"
+                        android:layout_width="0dp"
+                        android:layout_height="35dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/edittext_background"
+                        android:text="@string/submit"
+                        android:textSize="16sp"
+                        android:textAllCaps="false"
+                        android:fontFamily="@font/bdclean"
+                        android:textColor="@color/white_2"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:indeterminateTint="@color/red" />
+
+</RelativeLayout>

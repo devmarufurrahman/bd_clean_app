@@ -1,0 +1,208 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background_4"
+    tools:context=".EventActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_2"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/events"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white">
+
+        <Button
+            android:id="@+id/reload_btn"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
+            android:background="@color/green_2"
+            android:fontFamily="@font/bdclean"
+            android:text="@string/refresh"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/event_card_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_toolbar"
+        app:cardBackgroundColor="#F2F2F2"
+        app:cardCornerRadius="10dp"
+        app:cardElevation="4dp"
+        app:cardPreventCornerOverlap="true"
+        app:contentPadding="8dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/event_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/bdclean_bold"
+                android:text="Clean Bangladesh"
+                android:textColor="@color/black"
+                android:textSize="14sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/event_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/event_name"
+                android:fontFamily="@font/bdclean"
+                android:text="Mega Event"
+                android:textColor="@color/text_color"
+                android:textSize="12sp" />
+
+            <TextView
+                android:id="@+id/event_location"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/event_type"
+                android:fontFamily="@font/bdclean"
+                android:text="Kawran Bazar, Dhaka"
+                android:textColor="@color/text_color"
+                android:textSize="12sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/layout_shape_1"
+                android:paddingHorizontal="5dp"
+                android:paddingVertical="3dp">
+
+                <TextView
+                    android:id="@+id/remaining_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/bdclean"
+                    android:padding="5dp"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/leave_event"
+                android:layout_width="wrap_content"
+                android:layout_height="35dp"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:background="@drawable/button_shape_7"
+                android:backgroundTint="@color/bdclean_green"
+                android:drawableStart="@drawable/icon_remove"
+                android:drawablePadding="10dp"
+                android:drawableTint="@color/white"
+                android:fontFamily="@font/bdclean"
+                android:paddingStart="10dp"
+                android:paddingEnd="10dp"
+                android:text="@string/submit"
+                android:textAllCaps="false"
+                android:textColor="@color/white"
+                android:textSize="12sp" />
+
+        </RelativeLayout>
+    </androidx.cardview.widget.CardView>
+
+
+    <LinearLayout
+        android:id="@+id/layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/event_card_1"
+        android:layout_marginHorizontal="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/ongoing_event"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape_5"
+            android:fontFamily="@font/bdclean"
+            android:text="@string/ongoing_event"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/upcoming_event"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape_6"
+            android:fontFamily="@font/bdclean"
+            android:text="@string/upcoming_event"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:textSize="14sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/record_status"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/layout_1"
+        android:fontFamily="@font/bdclean_bold"
+        android:gravity="center"
+        android:text="@string/no_record_found"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/swiperefresh"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/record_status">
+
+        <ListView
+            android:id="@+id/event_listView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/record_status"
+            android:divider="@drawable/listview_divider"
+            android:dividerHeight="1dp"
+            android:paddingHorizontal="10dp" />
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <!--    <Button-->
+    <!--        android:id="@+id/newEvent"-->
+    <!--        android:layout_width="match_parent"-->
+    <!--        android:layout_height="35dp"-->
+    <!--        android:layout_alignParentBottom="true"-->
+    <!--        android:layout_marginBottom="10dp"-->
+    <!--        android:layout_marginHorizontal="10dp"-->
+    <!--        android:background="@drawable/button_shape_1"-->
+    <!--        android:text="Create New Event"-->
+    <!--        android:textColor="@color/white" />-->
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_centerHorizontal="true"
+        android:indeterminateTint="@color/red" />
+
+</RelativeLayout>

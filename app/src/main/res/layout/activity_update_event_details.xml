@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background_4"
+    tools:context=".UpdateEventDetails">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        app:title="Update Event Details"
+        app:titleTextColor="@color/white_2"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/green_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/update_event_tv"
+        android:gravity="center"
+        android:padding="5dp"
+        android:layout_below="@+id/custom_toolbar"
+        android:textColor="@color/white_2"
+        android:textSize="18sp"/>
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/about_card_view"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:cardCornerRadius="20dp"
+        android:elevation="5dp"
+        app:contentPadding="10dp"
+        android:layout_below="@+id/tv_1"
+        android:layout_marginHorizontal="20dp"
+        app:cardMaxElevation="6dp"
+        android:layout_marginVertical="10dp"
+        app:cardBackgroundColor="@color/bdclean_green"
+        app:cardPreventCornerOverlap="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:id="@+id/tv_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Note: You have to update information one by one."
+                android:gravity="center"
+                android:padding="5dp"
+                android:textColor="@color/white_2"
+                android:textStyle="bold"
+                android:textSize="14sp"/>
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <Button
+        android:id="@+id/coordinate_button"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:text="@string/select_location_coordinates"
+        android:background="@drawable/edittext_background"
+        android:layout_marginHorizontal="20dp"
+        android:padding="10dp"
+        android:textColor="@color/white_2"
+        android:layout_below="@+id/about_card_view"
+        android:textSize="14sp"
+        android:textStyle="normal"
+        android:textAllCaps="false"/>
+
+
+    <LinearLayout
+        android:id="@+id/dateTime"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:layout_below="@+id/coordinate_button"
+        android:padding="5dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/update_start_date"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape_5"
+            android:backgroundTint="@color/white"
+            android:text="@string/start_date"
+            android:textSize="12sp"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bdclean_bold"/>
+
+        <Button
+            android:id="@+id/update_end_date"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape_6"
+            android:backgroundTint="@color/white"
+            android:text="@string/end_date"
+            android:textAllCaps="false"
+            android:textSize="12sp"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bdclean_bold"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/update_btn"
+        android:layout_width="120dp"
+        android:layout_height="40dp"
+        android:layout_below="@+id/dateTime"
+        android:background="@drawable/edittext_background"
+        android:gravity="center"
+        android:layout_centerInParent="true"
+        android:layout_marginTop="30dp"
+        android:text="Update"
+        android:textSize="18sp"
+        android:textAllCaps="false"
+        android:textColor="@color/white_2" />
+
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:visibility="gone"
+        android:indeterminateTint="@color/red" />
+
+
+</RelativeLayout>

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp"
+    android:background="@color/disabled_error_button_color">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:background="@color/white">
+
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:text="WARNING"
+            android:textAllCaps="true"
+            android:textColor="@color/red"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:background="@color/disabled_error_button_color"
+            android:fontFamily="@font/roboto_black"
+            android:layout_height="wrap_content"/>
+
+        <TextView
+            android:id="@+id/dialog_tv"
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:textAllCaps="true"
+            android:textColor="@color/black"
+            android:padding="4dp"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:background="@color/disabled_error_button_color"
+            android:fontFamily="@font/roboto"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+        <Button
+            android:id="@+id/close_btn"
+            android:layout_width="60dp"
+            android:text="OK"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_black"
+            android:textColor="@color/white"
+            android:layout_marginTop="10dp"
+            android:background="@drawable/button_shape_1"
+            android:layout_height="25dp"/>
+
+</LinearLayout>

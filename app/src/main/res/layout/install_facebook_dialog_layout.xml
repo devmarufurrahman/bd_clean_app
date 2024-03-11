@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:text="@string/facebook_app_error"
+            android:textAllCaps="true"
+            android:textColor="@color/green_2"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_black"
+            android:layout_height="wrap_content"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/post_btn"
+        android:layout_width="match_parent"
+        android:text="@string/close"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto_black"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_shape_4"
+        android:backgroundTint="#ED6316"
+        android:layout_height="25dp"/>
+
+</LinearLayout>

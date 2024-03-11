@@ -1,0 +1,1002 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background_4"
+    tools:context=".AmbassadorRegistrationActivity">
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        app:title="Ambassador Reg"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/green_2"/>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_toolbar"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!--            new ambassador start here-->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/about_card_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:elevation="5dp"
+                app:contentPadding="10dp"
+                app:cardMaxElevation="6dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/ambassador_application_registration_form"
+                        android:textColor="@color/white_2"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="22sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/goodwill_ambassador_and_inspirational_ambassador"
+                        android:textColor="@color/white_2"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="18sp"
+                        android:gravity="center"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/goodwill_amb_text"
+                        android:textColor="@color/white_2"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto"
+                        android:justificationMode="inter_word"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:elevation="5dp"
+                android:layout_marginTop="10dp"
+                app:contentPadding="10dp"
+                app:cardMaxElevation="6dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/goodwill_amb_text_2"
+                        android:padding="5dp"
+                        android:justificationMode="inter_word"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="14sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:fontFamily="@font/roboto"
+                        android:justificationMode="inter_word"
+                        android:padding="5dp"
+                        android:text="@string/goodwill_amb_ext_3"
+                        android:textColor="@color/white_2"
+                        android:textSize="14sp"
+
+                        />
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/about_card_view_3"
+                android:layout_below="@+id/about_card_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="10dp"
+                android:elevation="5dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/occupation_category"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:padding="5dp"
+                        android:textSize="14sp"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@drawable/edittext_background"
+                        android:orientation="horizontal"
+                        android:layout_marginTop="10dp"
+                        android:weightSum="2">
+
+                        <TextView
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/occupation"
+                            android:gravity="center"
+                            android:fontFamily="@font/bdclean"
+                            android:layout_gravity="center"
+                            android:textAllCaps="false"
+                            android:textColor="@color/hint_color"
+                            android:padding="5dp"
+                            android:textSize="14sp"
+                            android:layout_height="wrap_content"/>
+
+                        <Button
+                            android:id="@+id/occupation_spinner"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:layout_height="35dp"
+                            android:layout_gravity="center"
+                            android:background="@null"
+                            android:textColor="@color/white_2"
+                            android:textSize="12sp"
+                            android:textAllCaps="false"
+                            android:drawableEnd="@drawable/icon_dropdown"
+                            android:paddingHorizontal="20dp"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/condition_card_view_3"
+                android:layout_below="@+id/about_card_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="10dp"
+                android:elevation="5dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginHorizontal="10dp"
+                android:visibility="visible"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/goodwill_inspiration_tv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text=""
+                        android:padding="5dp"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:textSize="15sp"
+                        android:layout_gravity="center"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/about_card_view_4"
+                android:layout_below="@+id/about_card_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="10dp"
+                android:elevation="5dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/personal_information"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:padding="5dp"
+                        android:textSize="14sp"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+                        <EditText
+                            android:id="@+id/member_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:hint="@string/certificate_name"
+                            android:paddingHorizontal="15dp"
+                            android:background="@drawable/edittext_background"
+                            android:fontFamily="@font/bdclean"
+                            android:inputType="text"/>
+
+                        <EditText
+                            android:id="@+id/member_contact"
+                            android:layout_width="match_parent"
+                            android:textSize="14sp"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:background="@drawable/edittext_background"
+                            android:layout_marginTop="10dp"
+                            android:layout_height="50dp"
+                            android:hint="@string/phone_number"
+                            android:paddingHorizontal="15dp"
+                            android:fontFamily="@font/bdclean"
+                            android:inputType="phone"/>
+
+                        <EditText
+                            android:id="@+id/member_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:fontFamily="@font/bdclean"
+                            android:layout_marginTop="10dp"
+                            android:paddingHorizontal="15dp"
+                            android:hint="@string/present_address"
+                            android:background="@drawable/edittext_background"
+                            android:inputType="textMultiLine"/>
+
+                        <EditText
+                            android:id="@+id/father_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:background="@drawable/edittext_background"
+                            android:inputType="textPersonName"
+                            android:fontFamily="@font/bdclean"
+                            android:layout_marginTop="10dp"
+                            android:paddingHorizontal="15dp"
+                            android:hint="@string/father_name"/>
+
+                        <EditText
+                            android:id="@+id/member_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/edittext_background"
+                            android:fontFamily="@font/bdclean"
+                            android:hint="@string/email"
+                            android:inputType="textEmailAddress"
+                            android:paddingHorizontal="15dp"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="14sp" />
+
+                        <EditText
+                            android:id="@+id/mother_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bdclean"
+                            android:layout_marginTop="10dp"
+                            android:paddingHorizontal="15dp"
+                            android:hint="@string/mother_name"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:background="@drawable/edittext_background"
+                            android:inputType="textPersonName"/>
+
+
+                        <EditText
+                            android:id="@+id/nationality"
+                            android:layout_width="match_parent"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bdclean"
+                            android:layout_marginTop="10dp"
+                            android:paddingHorizontal="15dp"
+                            android:hint="@string/nationality"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:background="@drawable/edittext_background"
+                            android:layout_height="50dp"
+                            android:inputType="text"/>
+
+                        <EditText
+
+                            android:id="@+id/nid_number"
+                            android:layout_width="match_parent"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bdclean"
+                            android:layout_marginTop="10dp"
+                            android:paddingHorizontal="15dp"
+                            android:hint="@string/nid_number"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:background="@drawable/edittext_background"
+                            android:layout_height="50dp"
+                            android:inputType="numberSigned"/>
+
+                        <Button
+                            android:id="@+id/date_birth"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/button_shape_7"
+                            android:backgroundTint="@color/white"
+                            android:text="@string/date_of_birth"
+                            android:textAllCaps="false"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bdclean"
+                            android:textColor="@color/text_color"/>
+
+                        <LinearLayout
+                            android:id="@+id/reg_ll_1"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/edittext_background"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/choose_gender"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/bdclean"
+                                    android:layout_gravity="center"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/hint_color"
+                                    android:padding="5dp"
+                                    android:textSize="14sp"
+                                    android:layout_height="wrap_content"/>
+
+                                <Button
+                                    android:id="@+id/gender_spinner"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="35dp"
+                                    android:layout_gravity="center"
+                                    android:background="@null"
+                                    android:textColor="@color/white_2"
+                                    android:textSize="12sp"
+                                    android:textAllCaps="false"
+                                    android:drawableEnd="@drawable/icon_dropdown"
+                                    android:paddingHorizontal="20dp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:elevation="5dp"
+                app:contentPadding="10dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/academic_background_highest_grade_of_education"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:padding="5dp"
+                        android:textSize="14sp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/exam"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:hint="@string/exam_title"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:inputType="text"/>
+
+                    <EditText
+                        android:id="@+id/major"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:hint="@string/major"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:inputType="text"/>
+
+
+                    <EditText
+                        android:id="@+id/education_institute"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:hint="@string/highest_education_institute_name"
+                        android:inputType="text"/>
+
+                    <EditText
+                        android:id="@+id/pass_year"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:hint="@string/passing_year"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:inputType="number"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="10dp"
+                android:elevation="5dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/professional_information"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:padding="5dp"
+                        android:textSize="14sp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/current_occupation"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:hint="@string/current_occupation"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:inputType="text"/>
+
+                    <EditText
+                        android:id="@+id/employer_institution"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:hint="@string/employer_institution"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:inputType="text"/>
+
+                    <EditText
+                        android:id="@+id/employer_details"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:hint="@string/brief_description_of_your_current_role"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:inputType="text"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="10dp"
+                android:elevation="5dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/goodwill_ambassador_inspirational_ambassador_experience_if_any"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:padding="5dp"
+                        android:textSize="14sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:textSize="14sp"
+                        android:justificationMode="inter_word"
+                        android:text="@string/goodwill_amb_text_4"
+                        android:textColor="@color/white_2"
+                        android:padding="5dp"
+                        android:fontFamily="@font/roboto"/>
+
+
+                    <LinearLayout
+                        android:id="@+id/location_type_layout"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:visibility="visible"
+                        android:layout_marginTop="3dp">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/yes"
+                                android:textColor="@color/white_2"
+                                android:layout_marginStart="60dp"
+                                android:gravity="end"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/city_dialog_btn"
+                                android:layout_width="30dp"
+                                android:layout_marginEnd="60dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/white_2"
+                                android:buttonTint="@color/white_2"
+                                android:text="@string/yes"
+                                />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/no"
+                                android:layout_marginStart="60dp"
+                                android:textColor="@color/white_2"
+                                android:gravity="end"
+                                />
+                            <RadioButton
+                                android:id="@+id/district_dialog_btn"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/white_2"
+                                android:gravity="center"
+                                />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/ambassador_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="start|top"
+                        android:textSize="14sp"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:padding="15dp"
+                        android:hint="@string/please_provide_details"
+                        android:inputType="textMultiLine"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="10dp"
+                android:elevation="5dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/motivation_and_interest"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:padding="5dp"
+                        android:textSize="14sp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/ambassador_experience"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="start|top"
+                        android:textSize="14sp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:fontFamily="@font/roboto"
+                        android:padding="15dp"
+                        android:hint="@string/goodwill_amb_text_5"
+                        android:inputType="textMultiLine"/>
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="start|top"
+                        android:textSize="14sp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:fontFamily="@font/roboto"
+                        android:padding="15dp"
+                        android:hint="@string/goodwill_amb_text_6"
+                        android:inputType="textMultiLine"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="10dp"
+                android:elevation="5dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/availability_and_commitment"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:padding="5dp"
+                        android:textSize="14sp"
+                        />
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="start|top"
+                        android:textSize="14sp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:fontFamily="@font/roboto"
+                        android:padding="15dp"
+                        android:hint="@string/goodwill_amb_text_7"
+                        android:inputType="textMultiLine"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:textSize="14sp"
+                        android:justificationMode="inter_word"
+                        android:text="@string/goodwill_amb_text_8"
+                        android:textColor="@color/white_2"
+                        android:padding="5dp"
+                        android:fontFamily="@font/roboto"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:layout_marginHorizontal="30dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="center"
+                        android:visibility="visible"
+                        android:layout_marginTop="3dp">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:weightSum="2"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/yes"
+                                android:textColor="@color/white_2"
+                                android:gravity="end"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/yes1"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_marginRight="25dp"
+                                android:gravity="center"
+                                android:buttonTint="@color/white_2"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/no"
+                                android:layout_marginLeft="50dp"
+                                android:textColor="@color/white_2"
+                                android:gravity="end"
+                                />
+                            <RadioButton
+                                android:id="@+id/no1"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:buttonTint="@color/white_2"
+                                android:gravity="center"
+                                />
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="10dp"
+                android:elevation="5dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/additional_comments_or_information"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:padding="5dp"
+                        android:textSize="14sp"
+                        />
+
+
+
+                    <EditText
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="start|top"
+                        android:textSize="14sp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:fontFamily="@font/roboto"
+                        android:padding="15dp"
+                        android:hint="@string/is_there_anything_else_you_would_like_us_to_know"
+                        android:inputType="textMultiLine"/>
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10"
+                        android:layout_marginVertical="10dp"
+                        android:gravity="center_horizontal|center_vertical">
+
+                        <CheckBox
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:id="@+id/terms_check_box"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/bdclean_greenDark"/>
+
+                        <Button
+                            android:id="@+id/continue_btn"
+                            android:layout_width="0dp"
+                            android:layout_weight="9"
+                            android:layout_height="wrap_content"
+                            android:text="@string/i_here_by_certify_that"
+                            android:background="@drawable/circle_background"
+                            android:textSize="12sp"
+                            android:layout_marginHorizontal="1dp"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white_2"
+                            android:backgroundTint="@color/bdclean_greenDark"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--            new ambassador end here-->
+
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_background"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/bdclean_bold"
+                android:text="@string/submit"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

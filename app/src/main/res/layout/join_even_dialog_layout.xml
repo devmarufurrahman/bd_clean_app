@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    app:cardBackgroundColor="#2b4c77"
+    app:cardElevation="2dp"
+    app:cardMaxElevation="2dp"
+    app:contentPadding="10dp"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/you_have_joined_into_this_event"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:fontFamily="@font/roboto_black"/>
+
+
+        <Button
+            android:id="@+id/continue_btn"
+            android:layout_width="120dp"
+            android:layout_gravity="center"
+            android:layout_height="35dp"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="12sp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/continue_tv"
+            android:textAllCaps="false"
+            android:textColor="@color/black"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/button_shape_7"/>
+
+    </LinearLayout>
+
+
+
+</androidx.cardview.widget.CardView>

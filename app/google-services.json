@@ -1,0 +1,30 @@
+{
+  "project_info": {
+    "project_number": "121857436902",
+    "firebase_url": "https://bd-clean-fbe09-default-rtdb.asia-southeast1.firebasedatabase.app",
+    "project_id": "bd-clean-fbe09",
+    "storage_bucket": "bd-clean-fbe09.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:121857436902:android:a2e78c55bbb144c91a5f27",
+        "android_client_info": {
+          "package_name": "com.winkytech.bdclean"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA5ShF5qrgc5CTgIb2I3F6DDe0mAGypygk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

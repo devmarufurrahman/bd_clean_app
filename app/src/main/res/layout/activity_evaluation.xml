@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EvaluationActivity"
+    android:background="@drawable/activity_background_4">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        app:title="@string/evaluation"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/green_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/reload_btn"
+            android:layout_width="70dp"
+            android:layout_height="35dp"
+            android:layout_gravity="end"
+            android:layout_margin="10dp"
+            android:background="@color/green_2"
+            android:fontFamily="@font/bdclean"
+            android:text="@string/refresh"
+            android:textAllCaps="false"
+            android:textSize="12sp" />
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/evaluation_ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_toolbar"
+        android:layout_marginVertical="7dp"
+        android:layout_marginHorizontal="10dp"
+        android:weightSum="2">
+
+        <Button
+            android:id="@+id/self_ev_history"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:textSize="14sp"
+            android:layout_weight="1"
+            android:background="@drawable/button_shape_5"
+            android:backgroundTint="#B0D235"
+            android:text="@string/my_evaluation_list"
+            android:textColor="@color/black"
+            android:textAllCaps="false"
+            android:fontFamily="@font/bdclean"/>
+        <Button
+            android:id="@+id/other_ev_history"
+            android:layout_width="0dp"
+            android:layout_height="35dp"
+            android:layout_weight="1"
+            android:textSize="14sp"
+            android:background="@drawable/button_shape_6"
+            android:backgroundTint="#D0EB9A"
+            android:text="@string/other_s_evaluation_list"
+            android:textColor="@color/black"
+            android:fontFamily="@font/bdclean"
+            android:textAllCaps="false"/>
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/record_status"
+        android:layout_below="@+id/evaluation_ll1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/no_record_found"
+        android:gravity="center"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:padding="10dp"
+        android:fontFamily="@font/bdclean_bold"
+        android:textAllCaps="true"/>
+
+    <ListView
+        android:id="@+id/evaluation_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/listview_divider"
+        android:dividerHeight="2dp"
+        android:layout_below="@+id/record_status"/>
+
+    <ListView
+        android:id="@+id/evaluation_list_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@drawable/listview_divider"
+        android:dividerHeight="2dp"
+        android:layout_below="@+id/record_status"/>
+
+    <Button
+        android:id="@+id/new_evaluation"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="50dp"
+        android:layout_width="50dp"
+        android:background="@drawable/icon_create_post"
+        android:layout_height="50dp"/>
+
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_margin="10dp"
+        android:indeterminateTint="@color/red"/>
+
+</RelativeLayout>

@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background_4"
+    tools:context=".MyActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_2"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/my_activity"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white" />
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/swiperefresh"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+
+            <LinearLayout
+                android:id="@+id/layout_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="10dp"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/joined_event"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_5"
+                    android:backgroundTint="#B0D235"
+                    android:fontFamily="@font/bdclean_bold"
+                    android:text="@string/complete_event"
+                    android:textColor="@color/black"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+                <Button
+                    android:id="@+id/post_shared"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_6"
+                    android:fontFamily="@font/bdclean_bold"
+                    android:textAllCaps="false"
+                    android:backgroundTint="#D0EB9A"
+                    android:text="@string/shared_post"
+                    android:textColor="@color/black"
+                    android:textSize="12sp"
+                    android:textStyle="bold" />
+
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/activity_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:fontFamily="@font/bdclean_bold"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                />
+
+            <ListView
+                android:id="@+id/event_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/listview_divider"
+                android:dividerHeight="3dp"
+                android:paddingHorizontal="10dp" />
+
+            <ListView
+                android:id="@+id/post_list_view"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:divider="@drawable/listview_divider"
+                android:dividerHeight="3dp"
+                android:paddingHorizontal="10dp" />
+
+
+
+
+        </LinearLayout>
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <Button
+        android:id="@+id/load_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/bdclean_greenDark"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/bdclean_bold"
+        android:gravity="center"
+        android:text="@string/load_more"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:indeterminateTint="@color/red" />
+
+</RelativeLayout>

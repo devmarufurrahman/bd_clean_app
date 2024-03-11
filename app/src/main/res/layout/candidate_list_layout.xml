@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:padding="10dp"
+    android:background="@color/bdclean_green">
+
+    <LinearLayout
+        android:id="@+id/candidate_photo_parent"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:orientation="vertical"
+        android:layout_centerVertical="true"
+        android:background="@drawable/custom_round_layout"
+        android:backgroundTint="@color/bdclean_greenDark"
+        android:gravity="center"
+        android:elevation="2dp">
+
+        <LinearLayout
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:background="@drawable/custom_round_layout"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:elevation="2dp">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/candidate_photo"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                app:shapeAppearance="@style/RoundShapeImg"
+                android:elevation="2dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/candidate_photo_parent"
+        android:layout_toStartOf="@+id/candidate_symbol_parent"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/candidate_name"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_gravity="center"
+            android:fontFamily="@font/bdclean"
+            android:background="@drawable/text_background_1"
+            android:gravity="center"
+            android:text="name"
+            android:textColor="@color/white"
+            android:elevation="4dp"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/total_vote"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/bdclean"
+            android:padding="5dp"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/candidate_symbol_parent"
+        android:layout_width="85dp"
+        android:layout_height="85dp"
+        android:orientation="vertical"
+        android:background="@drawable/custom_round_layout"
+        android:backgroundTint="@color/bdclean_greenDark"
+        android:gravity="center"
+        android:elevation="2dp"
+        android:layout_gravity="end"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="10dp"
+        android:layout_alignParentEnd="true"
+        >
+
+        <LinearLayout
+            android:layout_width="78dp"
+            android:layout_height="78dp"
+            android:background="@drawable/custom_round_layout"
+            android:gravity="center"
+            android:layout_gravity="center"
+            android:elevation="2dp"
+            >
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/candidate_symbol"
+                android:layout_width="75dp"
+                android:layout_height="75dp"
+                android:layout_gravity="center"
+                android:adjustViewBounds="true"
+                app:shapeAppearance="@style/RoundShapeImg"
+                android:src="@drawable/candidate_symbol"
+                android:elevation="2dp"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+
+    <ImageView
+        android:layout_width="60dp"
+        android:layout_height="60dp"/>
+
+    <!--    <CheckBox-->
+    <!--        android:id="@+id/checkBox"-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_centerVertical="true"-->
+    <!--        android:layout_marginHorizontal="10dp"-->
+    <!--        android:background="@color/white"/>-->
+
+</RelativeLayout>

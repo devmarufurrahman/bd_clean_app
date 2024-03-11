@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".OtpActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_2"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/confirmation"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white" />
+
+    <LinearLayout
+        android:id="@+id/ll_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_toolbar"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/login_iv"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_marginStart="10dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="10dp"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bd_clean_logo" />
+
+    </LinearLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/ll_2"
+        android:layout_marginTop="10dp"
+        app:cardBackgroundColor="#61a0af"
+        app:cardCornerRadius="6dp"
+        app:cardElevation="2dp"
+        app:cardMaxElevation="2dp"
+        app:cardPreventCornerOverlap="true"
+        app:cardUseCompatPadding="true"
+        app:contentPadding="10dp">
+
+        <TextView
+            android:id="@+id/tv_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/custom_toolbar"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="@string/otp_tv"
+            android:textAllCaps="true"
+            android:textColor="@color/white"
+            android:textSize="14sp" />
+
+    </androidx.cardview.widget.CardView>
+
+    <LinearLayout
+        android:id="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/card_1"
+        android:layout_marginTop="10dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/ed_otp"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:background="@drawable/text_field_shape"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:hint="@string/otp_code"
+            android:textColorHint="#61a0af"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/confirm_btn"
+            android:layout_width="130dp"
+            android:layout_height="40dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="10dp"
+            android:backgroundTint="#61a0af"
+            android:fontFamily="@font/roboto"
+            android:text="@string/continue_tv"
+            android:textColor="@color/white"
+            android:textSize="12sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

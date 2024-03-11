@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    app:cardUseCompatPadding="true"
+    app:cardBackgroundColor="@color/bdclean_green"
+    app:cardElevation="2dp"
+    app:cardPreventCornerOverlap="true"
+    app:cardCornerRadius="4dp"
+    app:cardMaxElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:background="@drawable/imageview_background"
+        android:orientation="horizontal">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/member_img"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="5dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/icon_user" />
+
+        <LinearLayout
+            android:id="@+id/ll_1"
+            android:orientation="vertical"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/member_img"
+            android:layout_centerVertical="true"
+            android:padding="5dp">
+
+            <TextView
+                android:id="@+id/member_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Member Name"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bdclean"/>
+
+
+            <TextView
+                android:id="@+id/member_position"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Member Position"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bdclean"/>
+
+            <TextView
+                android:id="@+id/user_id"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="User ID"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bdclean"/>
+
+            <TextView
+                android:id="@+id/user_address"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="address"
+                android:textSize="12sp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bdclean"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

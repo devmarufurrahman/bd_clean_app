@@ -1,0 +1,312 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background_4"
+    tools:context=".EventDetailsActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        app:title="@string/event_details"
+        app:titleTextColor="@color/white_2"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/green_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        android:id="@+id/swiperefresh2"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/custom_toolbar">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/event_details_scroll"
+            android:layout_below="@+id/event_details_card_1"
+            android:nestedScrollingEnabled="true"
+            android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:id="@+id/event_photo"
+                android:background="@color/green_4"
+                android:layout_width="match_parent"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+                android:layout_height="190dp"/>
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/event_details_card_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardBackgroundColor="@color/bdclean_green"
+                app:cardUseCompatPadding="true"
+                app:cardCornerRadius="5dp"
+                app:cardElevation="2dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardMaxElevation="2dp"
+                app:cardPreventCornerOverlap="true"
+                >
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:padding="10dp"
+                        android:background="@color/bdclean_green"
+                        android:orientation="vertical">
+
+                        <!--                <ImageView-->
+                        <!--                    android:src="@drawable/bd_clean_logo"-->
+                        <!--                    android:scaleType="fitXY"-->
+                        <!--                    android:layout_width="25dp"-->
+                        <!--                    android:layout_height="25dp"/>-->
+
+                        <TextView
+                            android:id="@+id/event_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="20sp"
+                            android:gravity="center"
+                            android:fontFamily="@font/bdclean_bold"
+                            android:textColor="@color/white_2"/>
+
+                        <TextView
+                            android:id="@+id/event_join_time"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:fontFamily="@font/roboto_black"
+                            android:padding="5dp"
+                            android:textColor="@color/white_2"/>
+
+
+                        <TextView
+                            android:id="@+id/event_start_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:fontFamily="@font/bdclean"
+                            android:padding="5dp"
+                            android:textColor="@color/white_2"/>
+
+
+                        <TextView
+                            android:id="@+id/event_end_date"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:fontFamily="@font/bdclean"
+                            android:padding="5dp"
+                            android:textColor="@color/white_2"/>
+
+                        <TextView
+                            android:id="@+id/event_division"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:textColor="@color/white_2"
+                            android:fontFamily="@font/bdclean"/>
+
+                        <TextView
+                            android:id="@+id/event_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:textSize="14sp"
+                            android:padding="5dp"
+                            android:gravity="center"
+                            android:fontFamily="@font/bdclean"
+                            android:textColor="@color/white_2"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <androidx.cardview.widget.CardView
+                        android:id="@+id/status_layout_1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/bdclean_green"
+                        app:cardUseCompatPadding="true"
+                        app:cardCornerRadius="5dp"
+                        android:layout_marginTop="5dp"
+                        app:cardElevation="2dp"
+                        android:layout_marginHorizontal="10dp"
+                        app:cardMaxElevation="2dp"
+                        app:cardPreventCornerOverlap="true"
+                        >
+
+                        <LinearLayout
+                            android:orientation="horizontal"
+                            android:layout_width="match_parent"
+                            android:gravity="center"
+                            android:layout_below="@+id/event_details_card_1"
+                            android:layout_height="wrap_content">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/status"
+                                android:textAllCaps="false"
+                                android:textStyle="bold"
+                                android:fontFamily="@font/bdclean_bold"
+                                android:layout_marginStart="8dp"
+                                android:textSize="14sp"
+                                android:padding="5dp"
+                                android:textColor="@color/white_2"/>
+
+                            <TextView
+                                android:id="@+id/event_active_status"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:textSize="14sp"
+                                android:gravity="end"
+                                android:padding="5dp"
+                                android:fontFamily="@font/bdclean"
+                                android:layout_marginHorizontal="4dp"
+                                android:textAllCaps="false"
+                                android:textColor="@color/white_2"/>
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <androidx.cardview.widget.CardView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        app:cardBackgroundColor="@color/bdclean_green"
+                        app:cardUseCompatPadding="true"
+                        app:cardCornerRadius="5dp"
+                        app:cardElevation="2dp"
+                        android:layout_marginHorizontal="10dp"
+                        app:cardMaxElevation="2dp"
+                        app:cardPreventCornerOverlap="true"
+                        android:id="@+id/card_3"
+                        >
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Event Details:"
+                                android:layout_gravity="start"
+                                android:textColor="@color/white_2"
+                                android:textSize="16sp"
+                                android:padding="5dp"
+                                android:fontFamily="@font/roboto_black"/>
+
+                            <TextView
+                                android:id="@+id/event_details"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="........"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white_2"
+                                android:textSize="14sp"
+                                android:gravity="center"
+                                android:justificationMode="inter_word"
+                                android:padding="5dp"
+                                android:fontFamily="@font/roboto_black"/>
+
+
+                        </LinearLayout>
+
+                    </androidx.cardview.widget.CardView>
+
+
+                    <LinearLayout
+                        android:id="@+id/layout_2"
+                        android:layout_width="match_parent"
+                        android:orientation="horizontal"
+                        android:weightSum="2"
+                        android:layout_marginTop="10dp"
+                        android:layout_marginHorizontal="10dp"
+                        android:layout_height="wrap_content">
+
+                        <Button
+                            android:id="@+id/join_event"
+                            android:layout_width="0dp"
+                            android:layout_weight="1"
+                            android:text="@string/join_event"
+                            android:background="@drawable/button_shape_5"
+                            android:textSize="12sp"
+                            android:drawableStart="@drawable/ic_baseline_check_circle_24"
+                            android:paddingStart="30dp"
+                            android:paddingEnd="30dp"
+                            android:layout_marginEnd="2dp"
+                            android:layout_height="35dp"/>
+
+                        <Button
+                            android:id="@+id/leave_event"
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:layout_marginStart="2dp"
+                            android:layout_weight="1"
+                            android:background="@drawable/button_shape_6"
+                            android:drawableStart="@drawable/icon_cancel"
+                            android:paddingStart="30dp"
+                            android:paddingEnd="30dp"
+                            android:text="@string/leave_event"
+                            android:textSize="12sp"
+                            tools:ignore="TouchTargetSizeCheck" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+        </LinearLayout>
+
+
+        </ScrollView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_gravity="center"
+        android:visibility="gone"
+        android:indeterminateTint="@color/red" />
+
+</RelativeLayout>

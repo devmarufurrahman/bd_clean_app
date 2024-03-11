@@ -1,0 +1,578 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MemberDetailsActivity"
+    android:background="@drawable/activity_background_4">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        app:title="@string/member_details"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/green_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:id="@+id/message_icon"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/messanger_icon"
+            android:layout_gravity="end"
+            android:layout_marginEnd="15dp"
+            />
+
+    </androidx.appcompat.widget.Toolbar>
+
+<!--    <androidx.cardview.widget.CardView-->
+<!--        android:id="@+id/details_card_1"-->
+<!--        android:layout_below="@+id/custom_toolbar"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="250dp"-->
+<!--        app:cardUseCompatPadding="true"-->
+<!--        app:cardPreventCornerOverlap="true"-->
+<!--        app:cardCornerRadius="10dp"-->
+<!--        app:cardBackgroundColor="@color/white"-->
+<!--        app:cardMaxElevation="4dp"-->
+<!--        app:cardElevation="2dp">-->
+
+<!--        <ImageView-->
+<!--            android:id="@+id/member_photo"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:scaleType="fitCenter"/>-->
+
+<!--    </androidx.cardview.widget.CardView>-->
+
+    <RelativeLayout
+        android:id="@+id/details_card_1"
+        android:orientation="vertical"
+        android:layout_below="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:background="@color/bdclean_green">
+
+        <ImageView
+            android:id="@+id/bdclean_banner"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:src="@drawable/cover_photo"
+            android:scaleType="centerCrop"
+            android:background="@color/white"/>
+
+        <LinearLayout
+            android:id="@+id/image_layout"
+            android:layout_width="120dp"
+            android:layout_height="120dp"
+            android:layout_marginTop="90dp"
+            android:gravity="center"
+            android:layout_marginStart="20dp"
+            android:background="@drawable/profile_photo_background_2">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/member_photo"
+                android:layout_width="85dp"
+                android:layout_height="85dp"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/info_layout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_toEndOf="@+id/image_layout"
+            android:layout_marginVertical="10dp"
+            android:layout_marginHorizontal="10dp"
+            android:gravity="start"
+            android:layout_below="@+id/bdclean_banner">
+
+            <TextView
+                android:id="@+id/member_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="name"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bdclean_bold"
+                android:textSize="16sp"/>
+
+            <TextView
+                android:id="@+id/member_designation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="designation"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bdclean"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/user_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:text="user id"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bdclean"
+                android:textSize="12sp"/>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:id="@+id/details_scrollV"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scrollbars="none"
+        android:layout_below="@+id/details_card_1">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/details_card_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardMaxElevation="2dp"
+                app:cardPreventCornerOverlap="true"
+                android:backgroundTint="@color/statusCardBg"
+                app:cardCornerRadius="15dp"
+                app:contentPaddingRight="15dp"
+                app:contentPaddingTop="5dp"
+                app:contentPaddingBottom="5dp"
+                app:contentPaddingLeft="15dp"
+                android:layout_marginTop="7dp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="2dp"
+                >
+
+                <LinearLayout
+                    android:id="@+id/layout_2"
+                    android:orientation="horizontal"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <ImageView
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_marginEnd="8dp"
+                        android:src="@drawable/status_icon"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/black"
+                        android:text="@string/membership_status"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean_bold"
+                        android:textAllCaps="false"
+                        android:padding="5dp"
+                        android:layout_gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/status"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textSize="14sp"
+                        android:layout_gravity="center"
+                        android:gravity="end"
+                        android:fontFamily="@font/bdclean_bold"
+                        android:textAllCaps="false"
+                        android:padding="5dp"/>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/details_card_3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardMaxElevation="2dp"
+                app:cardPreventCornerOverlap="true"
+                android:backgroundTint="@color/cardBgLight"
+                app:cardCornerRadius="15dp"
+                app:contentPaddingRight="15dp"
+                app:contentPaddingTop="5dp"
+                app:contentPaddingBottom="5dp"
+                app:contentPaddingLeft="15dp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="2dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/number_of_event_completed"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bdclean_bold"
+                            android:padding="1dp"/>
+
+                        <TextView
+                            android:id="@+id/completed_event"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/bdclean"
+                            android:padding="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/number_of_shared_post"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bdclean_bold"
+                            android:padding="1dp"/>
+
+                        <TextView
+                            android:id="@+id/completed_post"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/bdclean"
+                            android:padding="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/number_of_complain_created"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bdclean_bold"
+                            android:padding="1dp"/>
+
+                        <TextView
+                            android:id="@+id/complain_created"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/bdclean"
+                            android:padding="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="250dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/number_of_evaluation_created"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bdclean_bold"
+                            android:padding="1dp"
+                            />
+
+                        <TextView
+                            android:id="@+id/evaluation_create"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textAllCaps="true"
+                            android:textColor="@color/white"
+                            android:textAlignment="center"
+                            android:gravity="center"
+                            android:text="0"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/bdclean"
+                            android:padding="1dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/details_card_4"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardMaxElevation="2dp"
+                app:cardPreventCornerOverlap="true"
+                android:backgroundTint="@color/cardBgLight"
+                app:cardCornerRadius="15dp"
+                app:contentPaddingRight="15dp"
+                app:contentPaddingTop="5dp"
+                app:contentPaddingBottom="5dp"
+                app:contentPaddingLeft="15dp"
+                android:layout_marginBottom="10dp"
+                app:cardUseCompatPadding="true"
+                app:cardElevation="2dp"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/email"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/bdclean_bold"
+                            android:padding="1dp"/>
+
+                        <TextView
+                            android:id="@+id/member_email"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/email"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/bdclean"
+                            android:textColor="@color/white"
+                            android:linksClickable="true"
+                            android:autoLink="email"
+                            android:padding="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contact"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/bdclean_bold"
+                            android:padding="1dp"/>
+
+                        <TextView
+                            android:id="@+id/member_contact"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="@string/contact"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/bdclean"
+                            android:textColor="@color/white"
+                            android:padding="1dp"
+                            android:linksClickable="true"
+                            android:autoLink="phone"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/gender"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/bdclean_bold"
+                            android:padding="1dp"/>
+
+                        <TextView
+                            android:id="@+id/member_gender"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="gender"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/bdclean"
+                            android:textColor="@color/white"
+                            android:padding="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/occupation"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/bdclean_bold"
+                            android:padding="1dp"/>
+
+                        <TextView
+                            android:id="@+id/member_occupation"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="occupation"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/bdclean"
+                            android:textColor="@color/white"
+                            android:padding="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/religion"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/bdclean_bold"
+                            android:padding="1dp"/>
+
+                        <TextView
+                            android:id="@+id/member_religion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Religion"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/bdclean"
+                            android:textColor="@color/white"
+                            android:padding="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/address"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/bdclean_bold"
+                            android:padding="1dp"/>
+
+                        <TextView
+                            android:id="@+id/member_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="address"
+                            android:textSize="12sp"
+                            android:fontFamily="@font/bdclean"
+                            android:textColor="@color/white"
+                            android:padding="1dp"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/locationLayout"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="@string/location"
+                            android:textSize="14sp"
+                            android:textColor="@color/white"
+                            android:textAllCaps="false"
+                            android:fontFamily="@font/bdclean_bold"
+                            android:padding="1dp"/>
+
+                        <TextView
+                            android:id="@+id/member_location"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="location"
+                            android:textSize="12sp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/bdclean"
+                            android:padding="1dp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <Button
+                android:id="@+id/manage_member_btn"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:backgroundTint="@color/white"
+                android:layout_marginVertical="15dp"
+                android:text="@string/manage_member"
+                android:textSize="14sp"
+                android:textColor="@color/bdclean_green"
+                android:textAllCaps="false"
+                android:fontFamily="@font/bdclean_bold"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+</RelativeLayout>
