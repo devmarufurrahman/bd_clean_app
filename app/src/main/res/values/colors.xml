@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="green_1">#00974A</color>
+    <color name="green_2">#00A651</color>
+    <color name="red">#cd1b21</color>
+    <color name="teal_200">#FF03DAC5</color>
+    <color name="teal_700">#FF018786</color>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="green_3">#9fe5ae</color>
+    <color name="text_color">#676767</color>
+    <color name="background_gradient_start">#000000</color>
+    <color name="background_gradient_end">#DDDDDD</color>
+    <color name="fastlane_background">#0096a6</color>
+    <color name="search_opaque">#ffaa3f</color>
+    <color name="selected_background">#ffaa3f</color>
+    <color name="default_background">#3d3d3d</color>
+    <color name="disabled_success_button_color">#D4EDDA</color>
+    <color name="disabled_error_button_color">#F8D7DA</color>
+    <color name="enabled_success_button_color">#00974A</color>
+    <color name="enabled_error_button_color">#91040A</color>
+    <color name="blue_1">#2b4c77</color>
+    <color name="grey_1">#d2d4dc</color>
+    <color name="notification_color">#dfe3ee</color>
+    <color name="bdclean_green">#009748</color>
+    <color name="green_4">#008B3B</color>
+    <color name="green_5">#67D956</color>
+    <color name="bdclean_greenDark">#02682c</color>
+    <color name="pending">#E88655</color>
+    <color name="cardBgLight">#33a262</color>
+    <color name="statusCardBg">#b0d234</color>
+    <color name="white_2">#fffcd5</color>
+<!--    <color name="white_3">#fffcd5</color>-->
+    <color name="green_6">#598365</color>
+    <color name="hint_color">#95FDF9F9</color>
+    <color name="splash_screen_green">#008C3C</color>
+</resources>

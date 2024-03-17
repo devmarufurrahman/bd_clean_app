@@ -1,0 +1,1333 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/activity_background_4"
+    tools:context=".HonorableRegistration">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        app:title="Honorable Member"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        app:titleTextColor="@color/white"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:background="@color/green_2"/>
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_toolbar"
+        android:layout_marginBottom="50dp"
+        android:layout_marginTop="10dp"
+        >
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+            <!--    new ambassador start here  -->
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/about_card_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:elevation="5dp"
+                app:contentPadding="10dp"
+                app:cardMaxElevation="6dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                app:cardPreventCornerOverlap="true">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Honorable Membership Application Form"
+                        android:textColor="@color/white_2"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto"
+                        android:textSize="22sp"
+                        android:gravity="center"
+                        android:textStyle="bold"
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="BD Clean is a non-profit voluntary organization. BD Clean is not a sponsored or grant-based organization. BD Clean runs from the willful financial support of its members. To accelerate our activities towards a clean and green Bangladesh, we need more financial support. So we have decided to nominate a few individuals who will be recognized as an Honorable Member of BD Clean in return for a yearly fixed contribution."
+                        android:textColor="@color/white_2"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/roboto"
+                        android:justificationMode="inter_word"
+                        android:textSize="15sp"
+                        android:gravity="center"
+                        />
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/about_card_view_4"
+                android:layout_below="@+id/about_card_view_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="10dp"
+                android:elevation="5dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/personal_information"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        />
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical">
+
+
+
+                        <EditText
+                            android:id="@+id/member_address"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:fontFamily="@font/bdclean"
+                            android:layout_marginTop="10dp"
+                            android:paddingHorizontal="15dp"
+                            android:textCursorDrawable="@drawable/custom_cursor"
+                            android:hint="@string/present_address"
+                            android:background="@drawable/edittext_background"
+                            android:inputType="textMultiLine"/>
+
+                        <EditText
+                            android:id="@+id/father_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textSize="14sp"
+                            android:textColor="@color/white_2"
+                            android:textCursorDrawable="@drawable/custom_cursor"
+                            android:textColorHint="@color/hint_color"
+                            android:background="@drawable/edittext_background"
+                            android:inputType="textPersonName"
+                            android:fontFamily="@font/bdclean"
+                            android:layout_marginTop="10dp"
+                            android:paddingHorizontal="15dp"
+                            android:hint="@string/father_name"/>
+
+
+                        <EditText
+                            android:id="@+id/mother_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bdclean"
+                            android:layout_marginTop="10dp"
+                            android:paddingHorizontal="15dp"
+                            android:textCursorDrawable="@drawable/custom_cursor"
+                            android:hint="@string/mother_name"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:background="@drawable/edittext_background"
+                            android:inputType="textPersonName"/>
+
+                        <EditText
+                            android:id="@+id/nationality"
+                            android:layout_width="match_parent"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bdclean"
+                            android:layout_marginTop="10dp"
+                            android:paddingHorizontal="15dp"
+                            android:textCursorDrawable="@drawable/custom_cursor"
+                            android:hint="@string/nationality"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:background="@drawable/edittext_background"
+                            android:layout_height="50dp"
+                            android:inputType="text"/>
+
+                        <EditText
+
+                            android:id="@+id/nid_number"
+                            android:layout_width="match_parent"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bdclean"
+                            android:layout_marginTop="10dp"
+                            android:paddingHorizontal="15dp"
+                            android:textCursorDrawable="@drawable/custom_cursor"
+                            android:hint="@string/nid_number"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:background="@drawable/edittext_background"
+                            android:layout_height="50dp"
+                            android:inputType="numberSigned"/>
+
+                        <EditText
+                            android:id="@+id/fb_link"
+                            android:layout_width="match_parent"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bdclean"
+                            android:layout_marginTop="10dp"
+                            android:paddingHorizontal="15dp"
+                            android:textCursorDrawable="@drawable/custom_cursor"
+                            android:hint="@string/facebook_id_link"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:background="@drawable/edittext_background"
+                            android:layout_height="50dp"
+                            android:inputType="textUri"/>
+
+                        <Button
+                            android:id="@+id/date_birth"
+                            android:layout_width="match_parent"
+                            android:layout_height="45dp"
+                            android:layout_marginTop="10dp"
+                            android:background="@drawable/button_shape_7"
+                            android:backgroundTint="@color/white"
+                            android:text="@string/date_of_birth"
+                            android:textAllCaps="false"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bdclean"
+                            android:textColor="@color/text_color"/>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:background="@drawable/edittext_background"
+                            android:layout_marginTop="15dp"
+                            android:paddingHorizontal="15dp">
+
+                            <TextView
+                                android:layout_width="100dp"
+                                android:text="Marital Status"
+                                android:textAllCaps="false"
+                                android:textColor="@color/hint_color"
+                                android:layout_centerVertical="true"
+                                android:layout_alignParentStart="true"
+                                android:textSize="14sp"
+                                android:fontFamily="@font/bdclean"
+                                android:layout_height="wrap_content"/>
+
+                            <Button
+                                android:id="@+id/marital_spinner"
+                                android:layout_width="200dp"
+                                android:layout_height="35dp"
+                                android:layout_alignParentEnd="true"
+                                android:layout_centerVertical="true"
+                                android:textColor="@color/white_2"
+                                android:background="@null"
+                                android:textSize="12sp"
+                                android:drawableEnd="@drawable/icon_dropdown"/>
+
+                        </RelativeLayout>
+
+                        <EditText
+                            android:id="@+id/spouse_name"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:paddingHorizontal="15dp"
+                            android:hint="Spouse Name"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:textSize="14sp"
+                            android:fontFamily="@font/bdclean"
+                            android:background="@drawable/edittext_background"
+                            android:layout_marginTop="15dp"
+                            android:inputType="text"
+                            android:visibility="gone"
+                            />
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/edittext_background"
+                            android:orientation="horizontal"
+                            android:gravity="center"
+                            android:layout_marginTop="10dp"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/choose_religion"
+                                android:gravity="center"
+                                android:fontFamily="@font/bdclean"
+                                android:textColor="@color/hint_color"
+                                android:textAllCaps="false"
+                                android:textSize="14sp"
+                                android:layout_height="wrap_content"/>
+
+                            <Button
+                                android:id="@+id/religion_spinner"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white_2"
+                                android:background="@null"
+                                android:textSize="14sp"
+                                android:textAllCaps="false"
+                                android:drawableEnd="@drawable/icon_dropdown"
+                                android:paddingHorizontal="20dp"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/reg_ll_1"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginVertical="10dp">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="50dp"
+                                android:background="@drawable/edittext_background"
+                                android:orientation="horizontal"
+                                android:layout_marginTop="10dp"
+                                android:weightSum="2">
+
+                                <TextView
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:text="@string/choose_gender"
+                                    android:gravity="center"
+                                    android:fontFamily="@font/bdclean"
+                                    android:layout_gravity="center"
+                                    android:textAllCaps="false"
+                                    android:textColor="@color/hint_color"
+                                    android:padding="5dp"
+                                    android:textSize="14sp"
+                                    android:layout_height="wrap_content"/>
+
+                                <Button
+                                    android:id="@+id/gender_spinner"
+                                    android:layout_width="0dp"
+                                    android:layout_weight="1"
+                                    android:layout_height="35dp"
+                                    android:layout_gravity="center"
+                                    android:background="@null"
+                                    android:backgroundTint="@color/white"
+                                    android:textColor="@color/white_2"
+                                    android:textSize="12sp"
+                                    android:textAllCaps="false"
+                                    android:drawableEnd="@drawable/icon_dropdown"
+                                    android:paddingHorizontal="20dp"/>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_1"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:background="@drawable/edittext_background"
+                            android:layout_marginTop="10dp"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/division_tv"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/division"
+                                android:fontFamily="@font/bdclean"
+                                android:layout_gravity="center"
+                                android:textColor="@color/hint_color"
+                                android:gravity="center"
+                                android:textSize="14sp"
+                                android:textAllCaps="false"
+                                android:layout_height="wrap_content"/>
+
+                            <Button
+                                android:id="@+id/division_spinner"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white_2"
+                                android:background="@null"
+                                android:textSize="12sp"
+                                android:drawableEnd="@drawable/icon_dropdown"
+                                android:paddingHorizontal="20dp"
+                                android:textAllCaps="false"/>
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:id="@+id/location_type"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:background="@drawable/edittext_background"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp">
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="2"
+                                android:gravity="center"
+                                android:orientation="horizontal">
+                                <RadioButton
+                                    android:id="@+id/city_dialog"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:gravity="center"
+                                    android:buttonTint="@color/white_2"
+                                    android:textColor="@color/white_2"
+                                    android:text="@string/city_corporation"/>
+                                <RadioButton
+                                    android:id="@+id/district_dialog"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:buttonTint="@color/white_2"
+                                    android:textColor="@color/white_2"
+                                    android:gravity="center"
+                                    android:text="@string/district"/>
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+
+
+
+                        <LinearLayout
+                            android:id="@+id/ll_2"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/edittext_background"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/district_tv"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/district"
+                                android:gravity="center"
+                                android:fontFamily="@font/bdclean"
+                                android:textColor="@color/hint_color"
+                                android:layout_gravity="center"
+                                android:textSize="14sp"
+                                android:textAllCaps="false"
+                                android:layout_height="wrap_content"/>
+
+                            <Button
+                                android:id="@+id/district_spinner"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white_2"
+                                android:background="@null"
+                                android:textSize="14sp"
+                                android:drawableEnd="@drawable/icon_dropdown"
+                                android:paddingHorizontal="20dp"
+                                android:textAllCaps="false"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/upazilaLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:background="@drawable/edittext_background"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/upazila_tv"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/upazila"
+                                android:gravity="center"
+                                android:fontFamily="@font/bdclean"
+                                android:layout_gravity="center"
+                                android:textColor="@color/hint_color"
+                                android:textSize="14sp"
+                                android:textAllCaps="false"
+                                android:layout_height="wrap_content"/>
+
+                            <Button
+                                android:id="@+id/upazilla_spinner"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white_2"
+                                android:background="@null"
+                                android:textSize="14sp"
+                                android:drawableEnd="@drawable/icon_dropdown"
+                                android:paddingHorizontal="20dp"
+                                android:textAllCaps="false"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/zoneLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:background="@drawable/edittext_background"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/zone_tv"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/zone"
+                                android:gravity="center"
+                                android:fontFamily="@font/bdclean"
+                                android:layout_gravity="center"
+                                android:textColor="@color/hint_color"
+                                android:textSize="14sp"
+                                android:textAllCaps="false"
+                                android:layout_height="wrap_content"/>
+
+                            <Button
+                                android:id="@+id/zone_spinner"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white_2"
+                                android:background="@null"
+                                android:textSize="14sp"
+                                android:paddingHorizontal="20dp"
+                                android:textAllCaps="false"/>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/location_type2_layout"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:orientation="horizontal"
+                            android:background="@drawable/edittext_background"
+                            android:gravity="center"
+                            android:visibility="gone"
+                            android:layout_marginTop="10dp">
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:weightSum="2"
+                                android:orientation="horizontal">
+                                <RadioButton
+                                    android:id="@+id/municipal_btn"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/white_2"
+                                    android:buttonTint="@color/white_2"
+                                    android:text="@string/municipal"/>
+                                <RadioButton
+                                    android:id="@+id/union_btn"
+                                    android:layout_width="0dp"
+                                    android:layout_height="wrap_content"
+                                    android:layout_weight="1"
+                                    android:textColor="@color/white_2"
+                                    android:buttonTint="@color/white_2"
+                                    android:text="@string/union"/>
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:id="@+id/unionLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/edittext_background"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/union_tv"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/union"
+                                android:fontFamily="@font/bdclean"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/hint_color"
+                                android:textSize="14sp"
+                                android:textAllCaps="false"
+                                android:layout_height="wrap_content"/>
+
+                            <Button
+                                android:id="@+id/union_spinner"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:textColor="@color/white_2"
+                                android:background="@null"
+                                android:textSize="14sp"
+                                android:drawableEnd="@drawable/icon_dropdown"
+                                android:paddingHorizontal="20dp"
+                                android:textAllCaps="false"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/wardLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/edittext_background"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/ward_tv"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/ward"
+                                android:fontFamily="@font/bdclean"
+                                android:layout_gravity="center"
+                                android:gravity="center"
+                                android:textColor="@color/hint_color"
+                                android:textSize="14sp"
+                                android:textAllCaps="false"
+                                android:layout_height="wrap_content"/>
+
+                            <Button
+                                android:id="@+id/ward_spinner"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:textColor="@color/white_2"
+                                android:textSize="14sp"
+                                android:drawableEnd="@drawable/icon_dropdown"
+                                android:paddingHorizontal="20dp"
+                                android:textAllCaps="false"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/villageLayout"
+                            android:layout_width="match_parent"
+                            android:layout_height="50dp"
+                            android:background="@drawable/edittext_background"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="10dp"
+                            android:visibility="gone"
+                            android:weightSum="2">
+
+                            <TextView
+                                android:id="@+id/village_tv"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:text="@string/ward_village"
+                                android:fontFamily="@font/bdclean"
+                                android:layout_gravity="center"
+                                android:textColor="@color/hint_color"
+                                android:gravity="center"
+                                android:textSize="14sp"
+                                android:textAllCaps="false"
+                                android:layout_height="wrap_content"/>
+
+                            <Button
+                                android:id="@+id/village_spinner"
+                                android:layout_width="0dp"
+                                android:layout_weight="1"
+                                android:layout_height="35dp"
+                                android:layout_gravity="center"
+                                android:background="@null"
+                                android:textColor="@color/white_2"
+                                android:textSize="14sp"
+                                android:drawableEnd="@drawable/icon_dropdown"
+                                android:paddingHorizontal="20dp"
+                                android:textAllCaps="false"/>
+
+                        </LinearLayout>
+
+
+                        <EditText
+                            android:id="@+id/area_details_et"
+                            android:layout_width="match_parent"
+                            android:layout_height="48dp"
+                            android:background="@drawable/edittext_background"
+                            android:inputType="text"
+                            android:fontFamily="@font/bdclean"
+                            android:importantForAutofill="no"
+                            android:textColor="@color/white_2"
+                            android:textColorHint="@color/hint_color"
+                            android:layout_marginTop="10dp"
+                            android:hint="@string/area_details_et"
+                            android:textSize="14sp"
+                            android:visibility="gone"
+                            android:paddingHorizontal="15dp"/>
+
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                android:elevation="5dp"
+                app:contentPadding="10dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginHorizontal="10dp"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Educational Qualification (Latest Educational Qualification)"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/exam"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:hint="@string/exam_title"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:inputType="text"/>
+
+                    <EditText
+                        android:id="@+id/major"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:hint="Group/Subject/Degree"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:inputType="text"/>
+
+
+                    <EditText
+                        android:id="@+id/education_institute"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:hint="Institute/ University"
+                        android:inputType="text"/>
+
+                    <EditText
+                        android:id="@+id/pass_year"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:hint="@string/passing_year"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:inputType="number"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="10dp"
+                android:elevation="5dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Professional Experience/Job /Professional Information"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        />
+
+
+                    <EditText
+                        android:id="@+id/current_occupation"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:hint="@string/current_occupation"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:inputType="text"/>
+
+                    <EditText
+                        android:id="@+id/employer_designation"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:hint="Designation / Post"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:inputType="text"/>
+
+
+                    <EditText
+                        android:id="@+id/employer_institution"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:hint="@string/employer_institution"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:inputType="text"/>
+
+
+                    <EditText
+                        android:id="@+id/adress_institution"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:paddingHorizontal="15dp"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:hint="Institution Address"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:inputType="text"/>
+
+                    <EditText
+                        android:id="@+id/employer_details"
+                        android:layout_width="match_parent"
+                        android:textSize="14sp"
+                        android:fontFamily="@font/bdclean"
+                        android:layout_marginTop="10dp"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:paddingHorizontal="15dp"
+                        android:hint="@string/brief_description_of_your_current_role"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:background="@drawable/edittext_background"
+                        android:layout_height="50dp"
+                        android:inputType="text"/>
+
+
+                </LinearLayout>
+
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="10dp"
+                android:elevation="5dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Motivation and Interest"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        />
+
+                    <EditText
+                        android:id="@+id/motivation_interest"
+                        android:layout_width="match_parent"
+                        android:layout_height="80dp"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="start|top"
+                        android:textSize="14sp"
+                        android:layout_marginTop="3dp"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:fontFamily="@font/roboto"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:padding="15dp"
+                        android:hint="Why are you interested in becoming an honorable member of BD Clean?"
+                        android:inputType="textMultiLine"/>
+
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="10dp"
+                android:elevation="5dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Social Welfare and Philanthropic Activities"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        />
+
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:textSize="15sp"
+                        android:justificationMode="inter_word"
+                        android:text="Do you currently serve as an honorable member of any organization?"
+                        android:textColor="@color/white_2"
+                        android:padding="5dp"
+                        android:fontFamily="@font/roboto"/>
+
+                    <LinearLayout
+                        android:id="@+id/radioBtn"
+                        android:layout_width="match_parent"
+                        android:layout_height="38dp"
+                        android:orientation="horizontal"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="center"
+                        android:layout_gravity="center"
+                        android:visibility="visible"
+                        android:layout_marginTop="3dp">
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center"
+                            android:orientation="horizontal">
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/yes"
+                                android:textColor="@color/white_2"
+                                android:layout_marginStart="60dp"
+                                android:gravity="end"
+                                />
+
+                            <RadioButton
+                                android:id="@+id/yes_btn"
+                                android:layout_width="30dp"
+                                android:layout_marginEnd="60dp"
+                                android:layout_height="wrap_content"
+                                android:gravity="center"
+                                android:textColor="@color/white_2"
+                                android:buttonTint="@color/white_2"
+                                android:text="@string/yes"
+                                />
+
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="@string/no"
+                                android:layout_marginStart="60dp"
+                                android:textColor="@color/white_2"
+                                android:gravity="end"
+                                />
+                            <RadioButton
+                                android:id="@+id/no_btn"
+                                android:layout_width="30dp"
+                                android:layout_height="wrap_content"
+                                android:layout_weight="1"
+                                android:buttonTint="@color/white_2"
+                                android:gravity="center"
+                                />
+
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+
+                    <EditText
+                        android:id="@+id/experience_details"
+                        android:layout_width="match_parent"
+                        android:layout_height="60dp"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="start|top"
+                        android:textSize="14sp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:fontFamily="@font/roboto"
+                        android:visibility="gone"
+                        android:padding="15dp"
+                        android:hint="Provide Details"
+                        android:inputType="textMultiLine"/>
+
+                    <TextView
+                        android:id="@+id/detailsTv"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:textSize="15sp"
+                        android:layout_marginTop="5dp"
+                        android:justificationMode="inter_word"
+                        android:text="Please provide a brief description of at least three (03) of your social welfare and philanthropic activities below:"
+                        android:textColor="@color/white_2"
+                        android:padding="5dp"
+                        android:visibility="gone"
+                        android:fontFamily="@font/roboto"/>
+
+
+                    <EditText
+                        android:id="@+id/experience_details1"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="start|top"
+                        android:textSize="14sp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white_2"
+                        android:visibility="gone"
+                        android:textColorHint="@color/hint_color"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:fontFamily="@font/roboto"
+                        android:padding="10dp"
+                        android:hint="1"
+                        android:inputType="textMultiLine"/>
+
+                    <EditText
+                        android:id="@+id/experience_details2"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="start|top"
+                        android:visibility="gone"
+                        android:textSize="14sp"
+                        android:layout_marginTop="15dp"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:fontFamily="@font/roboto"
+                        android:padding="10dp"
+                        android:hint="2"
+                        android:inputType="textMultiLine"/>
+
+                    <EditText
+                        android:id="@+id/experience_details3"
+                        android:layout_width="match_parent"
+                        android:layout_height="70dp"
+                        android:background="@drawable/edittext_background"
+                        android:gravity="start|top"
+                        android:textSize="14sp"
+                        android:visibility="gone"
+                        android:textColor="@color/white_2"
+                        android:textColorHint="@color/hint_color"
+                        android:textCursorDrawable="@drawable/custom_cursor"
+                        android:layout_marginTop="15dp"
+                        android:fontFamily="@font/roboto"
+                        android:padding="10dp"
+                        android:hint="3"
+                        android:inputType="textMultiLine"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="10dp"
+                android:elevation="5dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Membership Rules and Prerequisites:"
+                        android:textColor="@color/white_2"
+                        android:fontFamily="@font/roboto_black"
+                        android:padding="5dp"
+                        android:textSize="16sp"
+                        />
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:textSize="15sp"
+                        android:layout_marginTop="5dp"
+                        android:justificationMode="inter_word"
+                        android:text="Any citizen or immigrant of Bangladesh and any organization is eligible to become an honorable member of BD Clean."
+                        android:textColor="@color/white_2"
+                        android:textStyle="bold"
+                        android:padding="5dp"
+                        android:fontFamily="@font/roboto"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:textSize="15sp"
+                        android:textStyle="bold"
+                        android:layout_marginTop="5dp"
+                        android:justificationMode="inter_word"
+                        android:text="A one-time payment of five lakh (05) taka for one year is required to become an honorable member."
+                        android:textColor="@color/white_2"
+                        android:padding="5dp"
+                        android:fontFamily="@font/roboto"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:textSize="15sp"
+                        android:layout_marginTop="5dp"
+                        android:justificationMode="inter_word"
+                        android:text="Your membership must be renewed annually upon payment of Tk 5 lakh; failure to do so will result in the cancellation of your honorable membership at the end of the term."
+                        android:textColor="@color/white_2"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto"/>
+
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="start"
+                        android:textSize="15sp"
+                        android:layout_marginTop="5dp"
+                        android:justificationMode="inter_word"
+                        android:text="Any individual engaged in anti-state activities will be deemed unsuitable for honorable membership. Furthermore, if an honorable member becomes involved in anti-state activities or is convicted by the court after obtaining membership, their membership will be terminated."
+                        android:textColor="@color/white_2"
+                        android:padding="5dp"
+                        android:textStyle="bold"
+                        android:fontFamily="@font/roboto"/>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                app:cardCornerRadius="20dp"
+                app:contentPadding="10dp"
+                android:elevation="5dp"
+                app:cardMaxElevation="6dp"
+                app:cardPreventCornerOverlap="true"
+                android:layout_marginHorizontal="10dp"
+                app:cardBackgroundColor="@color/bdclean_green"
+                android:layout_marginTop="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+                        android:weightSum="10"
+                        android:layout_marginVertical="10dp"
+                        android:gravity="center_horizontal|center_vertical">
+
+                        <CheckBox
+                            android:layout_width="0dp"
+                            android:layout_height="35dp"
+                            android:id="@+id/terms_check_box"
+                            android:layout_gravity="start"
+                            android:layout_weight="1"
+                            android:buttonTint="@color/bdclean_greenDark"/>
+
+                        <Button
+                            android:id="@+id/continue_btn"
+                            android:layout_width="0dp"
+                            android:layout_weight="9"
+                            android:layout_height="wrap_content"
+                            android:text="I hereby certify that the information provided in this form is complete, true, and correct to the best of my knowledge. I have not engaged in any anti-state or unethical activities. Furthermore, I affirm my commitment to refrain from participating in any unethical activities and to never encourage the platform to prioritize my interests over ethical considerations."
+                            android:background="@drawable/circle_background"
+                            android:textSize="13sp"
+                            android:layout_marginHorizontal="1dp"
+                            android:textAlignment="textStart"
+                            android:textAllCaps="false"
+                            android:textColor="@color/white_2"
+                            android:backgroundTint="@color/bdclean_green"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+            </androidx.cardview.widget.CardView>
+
+            <!--            new honorable end here-->
+
+            <Button
+                android:id="@+id/submit_btn"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:background="@drawable/edittext_background"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:layout_marginVertical="10dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/bdclean_bold"
+                android:text="@string/submit"/>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/red" />
+
+
+</RelativeLayout>

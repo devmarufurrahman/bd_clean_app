@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:paddingHorizontal="20dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="10dp">
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_gravity="center"
+            android:text="SAY SOMETHING ABOUT THIS POST"
+            android:textAllCaps="true"
+            android:textColor="@color/red"
+            android:padding="10dp"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:fontFamily="@font/roboto_black"
+            android:layout_height="wrap_content"/>
+
+        <EditText
+            android:id="@+id/post_caption"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:background="@drawable/text_field_shape"
+            android:inputType="text"
+            android:backgroundTint="#d9f8ff"
+            android:hint="CAPTION"
+            android:textSize="12sp"
+            android:paddingStart="10dp"/>
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/next_btn"
+        android:layout_width="wrap_content"
+        android:text="NEXT"
+        android:layout_gravity="center"
+        android:fontFamily="@font/roboto_black"
+        android:textColor="@color/white"
+        android:layout_marginTop="10dp"
+        android:background="@drawable/button_shape_1"
+        android:backgroundTint="#ED6316"
+        android:layout_height="25dp"/>
+
+</LinearLayout>

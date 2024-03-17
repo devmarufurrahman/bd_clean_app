@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/blue_1"
+    >
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/dialogTitle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="ARE YOU IN CITY CORPORATION OR IN DISTRICT?"
+            android:textAllCaps="true"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:textSize="12sp"
+            android:textColor="@color/white"
+            android:padding="10dp"
+            android:fontFamily="@font/roboto_black"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/card_1"
+            android:id="@+id/ll_1"
+            android:padding="10dp"
+            android:weightSum="2"
+            android:orientation="horizontal">
+
+            <Button
+                android:id="@+id/city_dialog_btn"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:backgroundTint="@color/green_2"
+                android:layout_weight="1"
+                android:background="@drawable/button_shape_5"
+                android:text="City_corporation"
+                android:textSize="12sp"
+                android:textColor="@color/white"/>
+
+            <Button
+                android:id="@+id/district_dialog_btn"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:backgroundTint="@color/red"
+                android:layout_weight="1"
+                android:background="@drawable/button_shape_6"
+                android:text="District"
+                android:textSize="12sp"
+                android:textColor="@color/white"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

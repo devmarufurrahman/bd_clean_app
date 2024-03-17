@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/main_menu_personal_profile"
+        android:icon="@drawable/user"
+        android:title="@string/personal_profile"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/main_menu_about"
+        android:icon="@drawable/icon_bdclean"
+        android:title="@string/about_bd_clean"
+        app:showAsAction="withText" />
+
+    <item
+        android:id="@+id/main_menu_logout"
+        android:icon="@drawable/logout"
+        android:title="@string/log_out"
+        app:showAsAction="withText" />
+
+<!--    <item-->
+<!--        android:id="@+id/language_switch"-->
+<!--        android:icon="@drawable/ic_baseline_language_24"-->
+<!--        android:title="বাংলা"-->
+<!--        app:showAsAction="withText"-->
+<!--        app:actionViewClass="android.widget.Switch" />-->
+
+    <item
+        android:id="@+id/languageToggle"
+        app:actionLayout="@layout/language_switch"
+        android:title="@string/language_txt"
+        app:showAsAction="always" />
+
+</menu>

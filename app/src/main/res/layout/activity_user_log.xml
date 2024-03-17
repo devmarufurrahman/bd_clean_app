@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".UserActivityLog"
+    android:background="@color/bdclean_green"
+    >
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        app:title="@string/activity_log"
+        app:titleTextColor="@color/white"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/green_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <TextView
+        android:id="@+id/log_tv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/my_activity_log_list"
+        android:layout_centerHorizontal="true"
+        android:padding="5dp"
+        android:textColor="@color/white"
+        android:textAllCaps="false"
+        android:gravity="center"
+        android:textSize="16sp"
+        android:fontFamily="@font/bdclean_bold"
+        android:layout_below="@+id/custom_toolbar"/>
+
+
+    <ListView
+        android:id="@+id/log_list"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/log_tv"
+        android:backgroundTint="@color/red"
+        android:dividerHeight="2dp"
+        android:layout_above="@+id/load_more"
+        android:divider="@drawable/listview_divider"
+        android:scrollbars="none" />
+
+
+    <Button
+        android:id="@+id/load_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/bdclean_greenDark"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/bdclean_bold"
+        android:gravity="center"
+        android:text="@string/load_more"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/red"
+        android:layout_gravity="end"
+        android:layout_margin="10dp"/>
+
+
+
+</RelativeLayout>

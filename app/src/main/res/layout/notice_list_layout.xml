@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardUseCompatPadding="false"
+    app:cardMaxElevation="4dp"
+    app:cardElevation="4dp"
+    app:cardCornerRadius="4dp"
+    app:contentPadding="5dp"
+    app:cardBackgroundColor="@color/bdclean_green">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:gravity="center"
+        android:padding="5dp"
+        android:background="@drawable/imageview_background"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/notice_subject"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Subject"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bdclean"
+                android:textAlignment="textStart"
+                android:padding="5dp"/>
+
+            <TextView
+                android:id="@+id/sender_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="Sender (Designation)"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bdclean"
+                android:textAlignment="textStart"
+                android:paddingHorizontal="5dp"/>
+
+            <TextView
+                android:id="@+id/notice_date"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="12sp"
+                android:text="Date"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bdclean"
+                android:textAlignment="textStart"
+                android:paddingHorizontal="5dp"/>
+
+            <TextView
+                android:id="@+id/notice_status"
+                android:layout_width="100dp"
+                android:layout_height="20dp"
+                android:textSize="12sp"
+                android:text="status"
+                android:gravity="center|start"
+                android:textColor="@color/white"
+                android:fontFamily="@font/bdclean"
+                android:background="@drawable/approve_post_background"
+                android:paddingHorizontal="5dp"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

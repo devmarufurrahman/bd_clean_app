@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="match_parent"
+xmlns:app="http://schemas.android.com/apk/res-auto"
+android:orientation="vertical"
+android:layout_height="wrap_content"
+app:cardCornerRadius="10dp"
+app:cardUseCompatPadding="false"
+android:layout_marginHorizontal="10dp">
+
+<RelativeLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:id="@+id/layout_1"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:orientation="vertical"
+        android:background="@color/green_4"/>
+
+    <ImageView
+        android:id="@+id/bd_clean_logo"
+        android:layout_width="120dp"
+        android:layout_height="70dp"
+        android:layout_marginTop="18dp"
+        android:layout_marginBottom="5dp"
+        android:src="@drawable/bdclean_logo_3"
+        android:layout_centerHorizontal="true"/>
+
+
+    <LinearLayout
+        android:id="@+id/layout_2"
+        android:layout_below="@+id/bd_clean_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/create_event_success_tv"
+                android:textAllCaps="false"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/black"
+                android:padding="10dp"
+                android:fontFamily="@font/roboto_black"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/ll_1"
+                android:padding="10dp"
+                android:weightSum="2"
+                android:orientation="horizontal">
+
+                <Button
+                    android:id="@+id/yes_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:backgroundTint="@color/green_2"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_5"
+                    android:text="@string/yes"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"/>
+
+                <Button
+                    android:id="@+id/no_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:backgroundTint="@color/red"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_6"
+                    android:text="@string/no"
+                    android:textSize="12sp"
+                    android:textColor="@color/white"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</RelativeLayout>
+
+</androidx.cardview.widget.CardView>

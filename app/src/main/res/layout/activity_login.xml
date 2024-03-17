@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/activity_background_4"
+    tools:context=".LoginActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_4"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar" >
+
+        <include
+            layout="@layout/language_switch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end
+"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/custom_toolbar"
+        android:orientation="vertical"
+        android:padding="5dp">
+
+        <ImageView
+            android:id="@+id/login_iv"
+            android:layout_width="160dp"
+            android:layout_height="160dp"
+            android:layout_gravity="center"
+            android:scaleType="fitCenter"
+            android:src="@drawable/bdclean_logo_2" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginTop="80dp"
+            android:orientation="vertical"
+            android:padding="10dp">
+
+            <EditText
+                android:id="@+id/login_et_contact"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/bdclean"
+                android:hint="Mobile Number"
+                android:inputType="phone"
+                android:textColor="@color/white_2"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textAlignment="center"
+                android:textColorHint="@color/hint_color"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/login_et_password"
+                android:layout_width="300dp"
+                android:layout_height="48dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/edittext_background"
+                android:fontFamily="@font/bdclean"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@color/white_2"
+                android:textAlignment="center"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textColorHint="@color/hint_color"
+                android:textSize="14sp" />
+
+            <Button
+                android:id="@+id/login_btn"
+                android:layout_width="200dp"
+                android:layout_height="40dp"
+                android:layout_gravity="center"
+                android:layout_marginHorizontal="20dp"
+                android:layout_marginTop="70dp"
+                android:textAllCaps="false"
+                android:textSize="18sp"
+                android:background="@drawable/edittext_background"
+                android:text="@string/login"
+                android:textColor="@color/white_2" />
+
+            <TextView
+                android:id="@+id/forgot_password_btn"
+                android:layout_width="200dp"
+                android:layout_height="wrap_content"
+                android:text="@string/forgot_password"
+                android:textColor="@color/white_2"
+                android:textSize="12sp"
+                android:gravity="center"
+                android:layout_marginTop="30dp"
+                android:layout_gravity="center"
+                android:fontFamily="@font/bdclean" />
+
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/signup_btn"
+            android:layout_width="200dp"
+            android:layout_height="45dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="40dp"
+            android:fontFamily="@font/bdclean"
+            android:gravity="center"
+            android:text="@string/sign_up"
+            android:textColor="@color/white_2"
+            android:textSize="18sp"
+            android:visibility="visible" />
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:indeterminateTint="@color/red" />
+
+</RelativeLayout>

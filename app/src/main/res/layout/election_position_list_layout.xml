@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="4dp"
+    app:cardBackgroundColor="@color/bdclean_green"
+    app:contentPadding="5dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="260dp"
+        android:padding="5dp"
+        android:background="@drawable/imageview_background"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/position_banner"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:scaleType="fitCenter"/>
+
+        <TextView
+            android:id="@+id/position_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/position_title"
+            android:textSize="16sp"
+            android:padding="5dp"
+            android:fontFamily="@font/bdclean"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/election_start_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/election_start_date"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:fontFamily="@font/bdclean"
+            android:textColor="@color/white"/>
+
+        <TextView
+            android:id="@+id/election_end_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/election_end_date"
+            android:textSize="14sp"
+            android:padding="5dp"
+            android:fontFamily="@font/bdclean"
+            android:textColor="@color/white"/>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

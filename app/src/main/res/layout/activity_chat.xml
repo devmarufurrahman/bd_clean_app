@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bdclean_green"
+    tools:context=".ChatActivity"
+    tools:ignore="HardcodedText">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_2"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:title="@string/chat_group"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        android:layout_marginBottom="7dp"
+        app:titleTextColor="@color/white">
+
+        <Button
+            android:id="@+id/reload_btn"
+            android:layout_width="70dp"
+            android:layout_height="40dp"
+            android:layout_gravity="end"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/button_shape_7"
+            android:backgroundTint="@color/green_2"
+            android:drawableEnd="@drawable/icon_reload"
+            android:paddingHorizontal="25dp" />
+
+    </androidx.appcompat.widget.Toolbar>
+
+
+
+    <RelativeLayout
+        android:id="@+id/card_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/chatlayout"
+        android:layout_marginHorizontal="7dp"
+        android:layout_marginBottom="6dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/custom_toolbar"
+
+        >
+
+        <ListView
+            android:id="@+id/chat_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:divider="@null"
+            android:dividerHeight="10dp"
+            android:scrollbars="none"
+            android:transcriptMode="alwaysScroll" />
+
+        <ProgressBar
+            android:id="@+id/progressbar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_gravity="center"
+            android:indeterminateTint="@color/red" />
+
+
+    </RelativeLayout>
+
+
+
+
+    <LinearLayout
+        android:id="@+id/chatlayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="10dp"
+        android:gravity="center"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <EditText
+            android:id="@+id/chat_edit"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_weight="1"
+            android:background="@drawable/sms_type_box"
+            android:ems="10"
+            android:hint="@string/start_typing"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:inputType="textCapSentences|textMultiLine"
+            android:padding="5dp"
+            android:screenReaderFocusable="true"
+            android:textSize="14sp" />
+
+        <Button
+            android:id="@+id/send_msg"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:background="@drawable/sms_send_btn" />
+
+    </LinearLayout>
+
+</RelativeLayout>

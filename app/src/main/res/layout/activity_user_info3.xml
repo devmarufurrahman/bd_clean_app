@@ -1,0 +1,284 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UserInfoActivity_3"
+    android:background="@drawable/activity_background_4">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        app:title=" "
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_2">
+
+        <TextView
+            android:id="@+id/event_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:textSize="12sp"
+            android:layout_margin="10dp"
+            android:textAllCaps="false"
+            android:padding="5dp"
+            android:gravity="center"
+            android:textColor="@color/white"
+            android:fontFamily="@font/bdclean_bold"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="@string/user_info_tv_1"
+        android:layout_gravity="center"
+        android:textColor="@color/white_2"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/layout_background"
+        android:backgroundTint="@color/green_4"
+        android:layout_centerHorizontal="true"
+        android:justificationMode="inter_word"
+        android:padding="10dp"
+        android:layout_below="@+id/custom_toolbar"
+        android:fontFamily="@font/bdclean_bold"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_below="@+id/tv_1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/reg_ll_1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:padding="5dp"
+            android:orientation="vertical">
+
+            <EditText
+                android:id="@+id/ref_by"
+                android:layout_width="match_parent"
+                android:background="@drawable/edittext_background"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textColorHint="@color/hint_color"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="15dp"
+                android:hint="@string/referece_by"
+                android:textSize="14sp"
+                android:fontFamily="@font/bdclean"
+                android:inputType="text"/>
+
+            <RelativeLayout
+                android:id="@+id/ll_2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_background"
+                android:gravity="center"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text="@string/choose_gender"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true"
+                    android:fontFamily="@font/bdclean"
+                    android:textColor="@color/hint_color"/>
+
+                <Button
+                    android:id="@+id/select_gender"
+                    android:layout_width="200dp"
+                    android:background="@null"
+                    android:layout_alignParentEnd="true"
+                    android:textColor="@color/white_2"
+                    android:textAllCaps="false"
+                    android:layout_centerVertical="true"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"
+                    android:layout_height="35dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_background"
+                android:paddingHorizontal="15dp"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text="@string/blood_group"
+                    android:textSize="14sp"
+                    android:layout_alignParentStart="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/hint_color"/>
+
+                <Button
+                    android:id="@+id/select_blood"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white_2"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="15dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text="@string/t_shirt_size"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/bdclean"
+                    android:textColor="@color/hint_color"/>
+
+                <Button
+                    android:id="@+id/select_shirt_size"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white_2"
+                    android:textAllCaps="false"
+                    android:layout_alignParentEnd="true"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="15dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:layout_height="wrap_content"
+                    android:textAllCaps="false"
+                    android:text="@string/occupation"
+                    android:textSize="14sp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:textColor="@color/hint_color"/>
+
+                <Button
+                    android:id="@+id/select_occupation"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:textAllCaps="false"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white_2"
+                    android:layout_alignParentEnd="true"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_background"
+                android:layout_marginTop="15dp"
+                android:paddingHorizontal="15dp">
+
+                <TextView
+                    android:layout_width="100dp"
+                    android:text="@string/religion"
+                    android:textColor="@color/hint_color"
+                    android:textAllCaps="false"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentStart="true"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/bdclean"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/religion_spinner"
+                    android:layout_width="200dp"
+                    android:layout_height="35dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_centerVertical="true"
+                    android:textColor="@color/white_2"
+                    android:background="@null"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    android:drawableEnd="@drawable/icon_dropdown"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="20dp"
+            android:layout_marginTop="10dp"
+            android:orientation="vertical">
+
+
+            <Button
+                android:id="@+id/next_btn"
+                android:layout_width="200dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center"
+                android:textSize="16sp"
+                android:fontFamily="@font/bdclean_bold"
+                android:background="@drawable/submit_button"
+                android:backgroundTint="@color/green_2"
+                android:textColor="@color/white_2"
+                android:textAllCaps="false"
+                android:text="@string/submit"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:visibility="gone"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:indeterminateTint="@color/red" />
+
+</RelativeLayout>

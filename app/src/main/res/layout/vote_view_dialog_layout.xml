@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_height="wrap_content"
+    app:cardCornerRadius="10dp"
+    app:cardUseCompatPadding="true"
+    android:layout_marginHorizontal="10dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:id="@+id/layout_1"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="vertical"
+            android:background="@color/green_4"/>
+
+        <ImageView
+            android:id="@+id/bd_clean_logo"
+            android:layout_width="120dp"
+            android:layout_height="70dp"
+            android:layout_marginTop="18dp"
+            android:layout_marginBottom="5dp"
+            android:src="@drawable/bdclean_logo_3"
+            android:layout_centerHorizontal="true"/>
+
+
+        <LinearLayout
+            android:id="@+id/layout_2"
+            android:layout_below="@+id/bd_clean_logo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/chief_coordinator"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:background="@color/bdclean_green"
+                android:fontFamily="@font/bdclean_bold"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/chief_photo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"/>
+
+                <TextView
+                    android:id="@+id/chief_name"
+                    android:layout_width="wrap_content"
+                    android:layout_weight="2"
+                    android:layout_gravity="center"
+                    android:padding="5dp"
+                    android:text="Name"
+                    android:gravity="center"
+                    android:textSize="16sp"
+                    android:fontFamily="@font/bdclean"
+                    android:textColor="@color/black"
+                    android:layout_height="wrap_content"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/chief_symbol"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/candidate_symbol"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/head_of_it_amp_media"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/bdclean_bold"
+                android:background="@color/bdclean_green"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/head_it_photo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"/>
+
+                <TextView
+                    android:id="@+id/head_it_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:text="Name"
+                    android:textSize="16sp"
+                    android:gravity="center"
+                    android:fontFamily="@font/bdclean"
+                    android:textColor="@color/black"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/head_it_symble"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/candidate_symbol"/>
+
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_gravity="center"
+                android:layout_height="wrap_content"
+                android:padding="5dp"
+                android:text="@string/head_of_logistics"
+                android:gravity="center"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:fontFamily="@font/bdclean_bold"
+                android:background="@color/bdclean_green"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:orientation="horizontal">
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/head_logistics_photo"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"/>
+
+                <TextView
+                    android:id="@+id/head_logistics_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_gravity="center"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:textSize="16sp"
+                    android:text="Name"
+                    android:gravity="center"
+                    android:fontFamily="@font/bdclean"
+                    android:textColor="@color/black"/>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/head_logistics_symble"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@drawable/candidate_symbol"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/reset_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/red"
+                    android:layout_gravity="center"
+                    android:text="@string/reset"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_shape_4"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/bdclean"/>
+
+                <Button
+                    android:id="@+id/submit_btn"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="40dp"
+                    android:backgroundTint="@color/green_2"
+                    android:layout_gravity="center"
+                    android:text="@string/confirm"
+                    android:textSize="14sp"
+                    android:textStyle="bold"
+                    android:textColor="@color/white"
+                    android:background="@drawable/button_shape_4"
+                    android:textAllCaps="false"
+                    android:fontFamily="@font/bdclean"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+</androidx.cardview.widget.CardView>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item
+        android:id="@+id/homeBottom"
+        android:title=""
+        android:icon="@drawable/bottom_home"
+        app:showAsAction="never"
+        android:iconTintMode="multiply"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/eventBottom"
+        android:title=""
+        android:icon="@drawable/bottom_activity"
+        app:showAsAction="never"
+        android:iconTintMode="multiply"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/socialMediaBottom"
+        android:title=""
+        android:icon="@drawable/bottom_dashboard"
+        app:showAsAction="never"
+        android:iconTintMode="multiply"
+        android:enabled="true"/>
+
+    <item
+        android:id="@+id/profileBottom"
+        android:title=""
+        android:icon="@drawable/bottom_admin"
+        app:showAsAction="never"
+        android:iconTintMode="multiply"
+        android:enabled="true"/>
+
+</menu>

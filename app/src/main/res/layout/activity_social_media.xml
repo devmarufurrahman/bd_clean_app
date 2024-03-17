@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".SocialMediaActivity"
+    android:background="@drawable/activity_background_4"
+    >
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        app:title="@string/facebook_post"
+        app:titleTextColor="@color/white"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/green_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <Button
+        android:id="@+id/save_btn"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginHorizontal="20dp"
+        android:layout_marginBottom="120dp"
+        android:background="@drawable/icon_create_post"
+        android:paddingHorizontal="10dp"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/about_card_view_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardCornerRadius="7dp"
+        android:elevation="5dp"
+        app:contentPadding="10dp"
+        android:layout_marginTop="10dp"
+        app:cardMaxElevation="6dp"
+        android:layout_marginHorizontal="8dp"
+        app:cardBackgroundColor="@color/bdclean_green"
+        android:layout_below="@+id/custom_toolbar"
+        app:cardPreventCornerOverlap="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Statics:"
+                android:layout_centerHorizontal="true"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:textSize="20sp"
+                android:fontFamily="@font/roboto_black"/>
+
+
+
+            <TextView
+                android:id="@+id/post_tv"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_post_list"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="7dp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:fontFamily="@font/bdclean_bold"/>
+
+
+            <TextView
+                android:id="@+id/post_approve"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/your_post_list"
+                android:layout_centerHorizontal="true"
+                android:paddingTop="7dp"
+                android:textColor="@color/white"
+                android:textAllCaps="false"
+                android:gravity="center"
+                android:textSize="16sp"
+                android:fontFamily="@font/bdclean_bold"/>
+
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
+
+
+
+
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:layout_width="match_parent"
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        android:id="@+id/swiperefresh"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/about_card_view_1"
+        android:layout_above="@+id/load_more"
+        >
+
+        <ListView
+            android:id="@+id/social_list"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/post_tv"
+
+            android:backgroundTint="@color/red"
+            android:dividerHeight="2dp"
+            android:divider="@drawable/listview_divider"
+            android:scrollbars="none" />
+
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+
+    <Button
+        android:id="@+id/load_more"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="center"
+        android:backgroundTint="@color/bdclean_greenDark"
+        android:layout_marginTop="4dp"
+        android:fontFamily="@font/bdclean_bold"
+        android:gravity="center"
+        android:text="@string/load_more"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textSize="12sp" />
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:indeterminateTint="@color/red" />
+
+</RelativeLayout>

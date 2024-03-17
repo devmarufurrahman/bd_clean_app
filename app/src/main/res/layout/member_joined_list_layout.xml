@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:padding="4dp"
+    app:cardUseCompatPadding="true"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/member_pic"
+                android:layout_width="80dp"
+                android:layout_height="80dp"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/member_name"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/roboto"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:id="@+id/member_join_date"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/roboto"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:id="@+id/member_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:textColor="@color/text_color"
+                    android:fontFamily="@font/roboto"
+                    android:padding="5dp"/>
+
+                <TextView
+                    android:id="@+id/status"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:text="status"
+                    android:background="@drawable/textview_shape_1"
+                    android:fontFamily="@font/roboto_black"
+                    android:padding="5dp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/approval_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="4dp"
+            android:weightSum="2">
+
+            <Button
+                android:id="@+id/approve_member"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/button_shape_5"
+                android:layout_weight="1"
+                android:textAllCaps="false"
+                android:text="@string/approve"/>
+
+            <Button
+                android:id="@+id/disapprove_member"
+                android:layout_width="0dp"
+                android:layout_height="35dp"
+                android:background="@drawable/button_shape_6"
+                android:layout_weight="1"
+                android:text="@string/reject"
+                android:textAllCaps="false"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.cardview.widget.CardView>

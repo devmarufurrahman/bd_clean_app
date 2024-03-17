@@ -1,0 +1,171 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".UserInfoActivity_2"
+    android:background="@drawable/activity_background_4"
+    tools:ignore="HardcodedText">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        app:title=" "
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/green_2">
+
+        <TextView
+            android:id="@+id/event_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_gravity="end"
+            android:textSize="12sp"
+            android:layout_margin="10dp"
+            android:textAllCaps="false"
+            android:padding="5dp"
+            android:gravity="center"
+            android:textColor="@color/white_2"
+            android:fontFamily="@font/bdclean_bold"/>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <TextView
+        android:id="@+id/tv_1"
+        android:layout_width="match_parent"
+        android:layout_height="70dp"
+        android:text="@string/user_info_tv_1"
+        android:layout_gravity="center"
+        android:textColor="@color/white_2"
+        android:textAllCaps="false"
+        android:textSize="20sp"
+        android:gravity="center"
+        android:background="@drawable/layout_background"
+        android:backgroundTint="@color/green_4"
+        android:layout_centerHorizontal="true"
+        android:justificationMode="inter_word"
+        android:padding="10dp"
+        android:layout_below="@+id/custom_toolbar"
+        android:fontFamily="@font/bdclean_bold"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_marginHorizontal="20dp"
+        android:layout_below="@+id/tv_1"
+        android:id="@+id/ll_1">
+
+
+        <EditText
+            android:id="@+id/nationality"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:hint="@string/nationality"
+            android:textSize="14sp"
+            android:fontFamily="@font/bdclean"
+            android:paddingHorizontal="15dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/edittext_background"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textColorHint="@color/hint_color"
+            android:inputType="text"/>
+
+
+        <EditText
+            android:id="@+id/highest_education"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_background"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textColorHint="@color/hint_color"
+            android:layout_marginTop="15dp"
+            android:hint="@string/highest_education"
+            android:textSize="14sp"
+            android:fontFamily="@font/bdclean"
+            android:paddingHorizontal="15dp"
+            android:inputType="text"/>
+
+
+        <EditText
+            android:id="@+id/education_institute"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_background"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textColorHint="@color/hint_color"
+            android:layout_marginTop="15dp"
+            android:hint="@string/highest_education_institute_name"
+            android:textSize="14sp"
+            android:fontFamily="@font/bdclean"
+            android:paddingHorizontal="15dp"
+            android:inputType="text"/>
+
+        <EditText
+            android:id="@+id/nid_number"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@drawable/edittext_background"
+            android:textCursorDrawable="@drawable/custom_cursor"
+            android:textColorHint="@color/hint_color"
+            android:layout_marginTop="15dp"
+            android:hint="@string/nid_birth_certificate_passport_number"
+            android:textSize="14sp"
+            android:fontFamily="@font/bdclean"
+            android:paddingHorizontal="15dp"
+            android:inputType="number"/>
+
+
+        <Button
+            android:id="@+id/date_birth"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/date_of_birth"
+            android:textColor="@color/bdclean_green"
+            android:fontFamily="@font/bdclean_bold"
+            android:textAllCaps="false"
+            android:backgroundTint="@color/white"
+            android:background="@drawable/button_shape_1"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_below="@+id/ll_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:layout_marginHorizontal="20dp"
+        android:gravity="center"
+        android:padding="4dp">
+
+
+
+        <Button
+            android:id="@+id/submit_btn"
+            android:layout_width="200dp"
+            android:layout_height="50dp"
+            android:textColor="@color/white_2"
+            android:background="@drawable/edittext_background"
+            android:text="@string/submit"
+            android:textAllCaps="false"
+            android:textSize="16sp"
+            android:fontFamily="@font/bdclean_bold"/>
+
+    </LinearLayout>
+
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:visibility="gone"
+        android:indeterminateTint="@color/red" />
+
+</RelativeLayout>

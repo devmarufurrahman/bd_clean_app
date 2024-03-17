@@ -1,0 +1,655 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".NewEventActivity"
+    android:id="@+id/container"
+    android:orientation="vertical"
+    android:background="@drawable/activity_background_4">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/custom_toolbar"
+        app:title="@string/new_event"
+        app:titleTextColor="@color/white_2"
+        app:titleTextAppearance="@style/Toolbar.TitleText"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        android:background="@color/green_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/custom_toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="5dp"
+                android:background="@drawable/edittext_background"
+                android:gravity="center"
+                android:weightSum="4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_event_type"
+                    android:textAllCaps="false"
+                    android:textColor="@color/hint_color"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="20dp"
+                    android:fontFamily="@font/bdclean"/>
+
+                <Button
+                    android:id="@+id/select_event_type"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="35dp"
+                    android:background="@null"
+                    android:textColor="@color/white_2"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/bdclean"
+                    android:textAllCaps="false"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingEnd="20dp"/>
+
+            </LinearLayout>
+
+            <EditText
+                android:id="@+id/event_name"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_background"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textColorHint="@color/hint_color"
+                android:fontFamily="@font/bdclean"
+                android:hint="@string/event_title"
+                android:inputType="text|textMultiLine"
+                android:paddingHorizontal="15dp"
+                android:textSize="14sp" />
+
+            <EditText
+                android:id="@+id/event_location"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/edittext_background"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textColorHint="@color/hint_color"
+                android:hint="@string/event_postal_address"
+                android:paddingHorizontal="15dp"
+                android:textSize="14sp"
+                android:fontFamily="@font/bdclean"
+                android:layout_marginTop="15dp"
+                android:inputType="text|textMultiLine"/>
+
+            <EditText
+                android:id="@+id/event_details"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:background="@drawable/edittext_background"
+                android:textCursorDrawable="@drawable/custom_cursor"
+                android:textColorHint="@color/hint_color"
+                android:gravity="start|top"
+                android:textSize="14sp"
+                android:layout_marginTop="15dp"
+                android:fontFamily="@font/bdclean"
+                android:padding="15dp"
+                android:hint="@string/event_details"
+                android:inputType="textMultiLine"/>
+
+            <LinearLayout
+                android:id="@+id/ll_1"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/division_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/division"
+                    android:fontFamily="@font/bdclean"
+                    android:layout_gravity="center"
+                    android:textColor="@color/hint_color"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/division_spinner"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white_2"
+                    android:layout_weight="1"
+                    android:background="@null"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"
+                    android:textAllCaps="false"
+                    android:textSize="12sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/location_type_layout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:background="@drawable/edittext_background"
+                android:backgroundTint="@color/white"
+                android:gravity="center"
+                android:visibility="gone"
+                android:layout_marginTop="10dp">
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/city_dialog_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:textColor="@color/white_2"
+                        android:buttonTint="@color/white_2"
+                        android:gravity="center"
+                        android:text="@string/city_corporation"/>
+                    <RadioButton
+                        android:id="@+id/district_dialog_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white_2"
+                        android:buttonTint="@color/white_2"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:text="@string/district"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_2"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/district_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/district"
+                    android:gravity="start"
+                    android:padding="10dp"
+                    android:fontFamily="@font/bdclean"
+                    android:textColor="@color/hint_color"
+                    android:layout_gravity="center"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/district_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white_2"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/upazilaLayout"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_background"
+                android:backgroundTint="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/upazila_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/upazila"
+                    android:gravity="center"
+                    android:fontFamily="@font/bdclean"
+                    android:layout_gravity="center"
+                    android:textColor="@color/hint_color"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/upazilla_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:textColor="@color/white_2"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/zoneLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_background"
+                android:backgroundTint="@color/white"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/zone_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/zone"
+                    android:gravity="center"
+                    android:fontFamily="@font/bdclean"
+                    android:layout_gravity="center"
+                    android:textColor="@color/hint_color"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/zone_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white_2"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:paddingHorizontal="20dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/location_type2_layout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:visibility="gone"
+                >
+
+                <RadioGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:weightSum="2"
+                    android:orientation="horizontal">
+                    <RadioButton
+                        android:id="@+id/municipal_btn"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:buttonTint="@color/white_2"
+                        android:textColor="@color/white_2"
+                        android:layout_weight="1"
+                        android:text="@string/municipal"/>
+                    <RadioButton
+                        android:id="@+id/union_btn"
+                        android:layout_width="0dp"
+                        android:textColor="@color/white_2"
+                        android:buttonTint="@color/white_2"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="@string/union"/>
+                </RadioGroup>
+
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/unionLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/union_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/union"
+                    android:fontFamily="@font/bdclean"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/hint_color"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/union_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white_2"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/wardLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/ward_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/ward"
+                    android:fontFamily="@font/bdclean"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/hint_color"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/ward_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white_2"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/villageLayout"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_background"
+                android:orientation="horizontal"
+                android:visibility="gone"
+                android:weightSum="2">
+
+                <TextView
+                    android:id="@+id/village_tv"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:text="@string/ward_village"
+                    android:fontFamily="@font/bdclean"
+                    android:layout_gravity="center"
+                    android:textColor="@color/hint_color"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:textAllCaps="false"
+                    android:layout_height="wrap_content"/>
+
+                <Button
+                    android:id="@+id/village_spinner"
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="35dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/white_2"
+                    android:background="@null"
+                    android:textSize="14sp"
+                    android:drawableEnd="@drawable/icon_dropdown"
+                    android:paddingHorizontal="20dp"
+                    android:textAllCaps="false"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:layout_marginTop="15dp"
+                android:background="@drawable/edittext_background"
+                android:gravity="center"
+                android:weightSum="4"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:id="@+id/monitor_name"
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:text="@string/select_supervisor"
+                    android:textAllCaps="false"
+                    android:textColor="@color/hint_color"
+                    android:gravity="center"
+                    android:textSize="14sp"
+                    android:fontFamily="@font/bdclean"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:background="@drawable/layout_shape_2"
+                android:backgroundTint="@color/green_4"
+                android:layout_marginTop="15dp">
+
+                <Button
+                    android:id="@+id/coordinate_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:text="@string/select_location_coordinates"
+                    android:background="@drawable/edittext_background"
+                    android:padding="10dp"
+                    android:textColor="@color/hint_color"
+                    android:textSize="14sp"
+                    android:textStyle="normal"
+                    android:textAllCaps="false"/>
+
+                <LinearLayout
+                    android:layout_below="@+id/coordinate_button"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="5dp"
+                    android:layout_marginTop="10dp"
+                    android:weightSum="2"
+                    android:visibility="gone"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/latitude"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white_2"
+                        android:textSize="14sp"
+                        android:padding="5dp"
+                        android:fontFamily="@font/bdclean_bold"
+                        android:text="@string/latitude"
+                        android:textAllCaps="false"
+                        android:gravity="center"/>
+
+                    <TextView
+                        android:id="@+id/longitude"
+                        android:layout_width="0dp"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white_2"
+                        android:textSize="14sp"
+                        android:padding="5dp"
+                        android:text="@string/longitude"
+                        android:fontFamily="@font/roboto_black"
+                        android:textAllCaps="false"
+                        android:gravity="center"/>
+
+                </LinearLayout>
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:padding="5dp"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/start_date"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_5"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/start_date"
+                    android:textSize="12sp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/bdclean_bold"/>
+
+                <Button
+                    android:id="@+id/end_date"
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_6"
+                    android:backgroundTint="@color/white"
+                    android:text="@string/end_date"
+                    android:textAllCaps="false"
+                    android:textSize="12sp"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/bdclean_bold"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:orientation="vertical">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:text="@string/click_the_box_below_to_select_an_event_cover_photo"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white_2"
+                    android:textSize="16sp"
+                    android:padding="5dp"
+                    android:fontFamily="@font/bdclean"/>
+
+                <LinearLayout
+                    android:background="@drawable/imageview_background"
+                    android:layout_width="match_parent"
+                    android:padding="2dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_height="140dp">
+
+                    <ImageView
+                        android:id="@+id/select_photo"
+                        android:layout_width="match_parent"
+                        android:layout_height="160dp"
+                        android:scaleType="fitCenter"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/cancel_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_5"
+                    android:backgroundTint="@color/red"
+                    android:text="@string/reset"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white_2" />
+
+                <Button
+                    android:id="@+id/create_btn"
+                    android:layout_width="0dp"
+                    android:layout_height="35dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/button_shape_6"
+                    android:backgroundTint="@color/green_2"
+                    android:text="@string/submit"
+                    android:textAllCaps="false"
+                    android:textColor="@color/white_2" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+    <ProgressBar
+        android:id="@+id/progressbar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginBottom="10dp"
+        android:indeterminateTint="@color/red" />
+
+</RelativeLayout>
